@@ -16,7 +16,7 @@ interface NavigationItem {
 
 const navigation: NavigationItem[] = [
     { name: 'About Us', href: '#about-section', current: false },
-    { name: 'Identify &amp; Train', href: '#identify-train-section', current: false },
+    { name: 'Identify & Train', href: '#identify-train-section', current: false },
     { name: 'Program', href: '#program-section', current: false },
     { name: 'Contact', href: '#contact-section', current: false },
 ]
@@ -58,7 +58,7 @@ const Navbar = () => {
                                         alt="POSSPOLE CATALYST" 
                                         width={280} 
                                         height={80}
-                                        className={`w-auto transition-all duration-300 ease-out ${isScrolled ? 'h-6 sm:h-8 md:h-10' : 'h-8 sm:h-12 md:h-14 lg:h-16'}`}
+                                        className="h-8 sm:h-10 lg:h-12 w-auto"
                                     />
                                 </Link>
                             </div>
@@ -90,7 +90,13 @@ const Navbar = () => {
                         {/* DRAWER ICON */}
 
                         <div className='block lg:hidden'>
-                            <Bars3Icon className="block h-6 w-6" aria-hidden="true" onClick={() => setIsOpen(true)} />
+                            <button 
+                                className="p-2 rounded-md hover:bg-gray-100 transition-colors duration-200"
+                                onClick={() => setIsOpen(true)}
+                                aria-label="Open navigation menu"
+                            >
+                                <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                            </button>
                         </div>
 
                         {/* DRAWER LINKS DATA */}
