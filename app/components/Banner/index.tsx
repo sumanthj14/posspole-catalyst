@@ -28,12 +28,12 @@ const Banner = () => {
                         <div className='text-2xl md:text-4xl font-bold mb-8 text-yellow-400'>
                             1,000,000+ AI-ready developers by 2040
                         </div>
-                        <p className='text-xl md:text-2xl font-light mb-8 max-w-5xl mx-auto leading-relaxed'>
+                        {/* <p className='text-xl md:text-2xl font-light mb-8 max-w-5xl mx-auto leading-relaxed'>
                             A proven, peer-to-peer and transformative tech platform to develop AI-ready tech skills, at scale
-                        </p>
-                        <p className='text-lg md:text-xl mb-12 max-w-6xl mx-auto leading-relaxed opacity-90'>
+                        </p> */}
+                        {/* <p className='text-lg md:text-xl mb-12 max-w-6xl mx-auto leading-relaxed opacity-90'>
                             We discover untapped talent, equip them with future-ready skills, and connect them to opportunities that change lives — and local ecosystems.
-                        </p>
+                        </p> */}
                     </div>
                     
 

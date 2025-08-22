@@ -104,7 +104,7 @@ const Aboutus = () => {
                         <div className='bg-white p-6 rounded-xl shadow-md'>
                             <h4 className='text-xl font-bold text-blue mb-3'>Merit-Based Access</h4>
                             <p className='text-bluegrey'>
-                                Based on merit, it is open to all backgrounds, especially those who don't succeed in traditional education systems and gives them access to high-quality education.
+                                Based on merit, it is open to all backgrounds, especially those who don&apos;t succeed in traditional education systems and gives them access to high-quality education.
                             </p>
                         </div>
                         
