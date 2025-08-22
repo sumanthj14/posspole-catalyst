@@ -58,7 +58,7 @@ const Navbar = () => {
                                         alt="POSSPOLE CATALYST" 
                                         width={280} 
                                         height={80}
-                                        className="h-8 sm:h-10 lg:h-12 w-auto"
+                                        className={`w-auto transition-all duration-300 ease-out ${isScrolled ? 'h-6 sm:h-8 md:h-10' : 'h-8 sm:h-12 md:h-14 lg:h-16'}`}
                                     />
                                 </Link>
                             </div>
@@ -90,13 +90,7 @@ const Navbar = () => {
                         {/* DRAWER ICON */}
 
                         <div className='block lg:hidden'>
-                            <button 
-                                className="p-2 rounded-md hover:bg-gray-100 transition-colors duration-200"
-                                onClick={() => setIsOpen(true)}
-                                aria-label="Open navigation menu"
-                            >
-                                <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                            </button>
+                            <Bars3Icon className="block h-6 w-6" aria-hidden="true" onClick={() => setIsOpen(true)} />
                         </div>
 
                         {/* DRAWER LINKS DATA */}

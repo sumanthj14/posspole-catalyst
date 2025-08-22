@@ -12,18 +12,20 @@ const Banner = () => {
                     className="object-cover"
                     priority
                 />
-                <div className='absolute inset-0 bg-black bg-opacity-30'></div>
+                <div className='absolute inset-0 bg-black bg-opacity-50'></div>
             </div>
 
             {/* Content */}
-            <div className='relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20'>
+            <div className='relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-20'>
                 <div className='text-center text-white'>
-                    <div className="py-4 sm:py-6 lg:py-8">
-                        <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 sm:mb-6'>
+
+                    
+                    <div className="py-8">
+                        <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6'>
                             Recode Our World<br />
                             <span className='text-blue-300'>With Talent</span>
                         </h1>
-                        <div className='text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-6 sm:mb-8 text-yellow-400 px-2'>
+                        <div className='text-2xl md:text-4xl font-bold mb-8 text-yellow-400'>
                             1,000,000+ AI-ready developers by 2040
                         </div>
                         {/* <p className='text-xl md:text-2xl font-light mb-8 max-w-5xl mx-auto leading-relaxed'>

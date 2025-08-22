@@ -43,24 +43,14 @@ const Contactusform = () => {
 
     return (
         <>
-            <div className="inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto md:ml-6 sm:pr-0">
-                {/* Mobile Contact Button */}
-                <div className='block lg:hidden'>
-                    <button 
-                        type="button" 
-                        className='bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg text-sm min-h-[44px] transition-colors duration-200' 
-                        onClick={openModal}
-                    >
-                        Contact
+            <div className=" inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto md:ml-6 sm:pr-0">
+                {/* <div className='lg:hidden'>
+                    <button type="button" className='bg-navyblue w-full hover:text-white text-white border border-purple font-medium py-2 px-4 rounded' onClick={openModal}>
+                        Contact Us
                     </button>
-                </div>
-                {/* Desktop Contact Button */}
+                </div> */}
                 <div className='hidden lg:block'>
-                    <button 
-                        type="button" 
-                        className='justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-blue-600 hover:text-white transition-colors duration-200 min-h-[44px]' 
-                        onClick={openModal}
-                    >
+                    <button type="button" className='justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-navyblue hover:text-white' onClick={openModal}>
                         Contact Us
                     </button>
                 </div>
@@ -81,7 +71,7 @@ const Contactusform = () => {
                     </Transition.Child>
 
                     <div className="fixed inset-0 overflow-y-auto">
-                        <div className="flex min-h-full items-center justify-center p-2 sm:p-4 text-center">
+                        <div className="flex min-h-full items-center justify-center p-4 text-center">
                             <Transition.Child
                                 as={Fragment}
                                 enter="ease-out duration-300"
@@ -91,9 +81,9 @@ const Contactusform = () => {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full max-w-sm sm:max-w-md transform overflow-hidden rounded-xl sm:rounded-2xl bg-white p-4 sm:p-6 text-left align-middle shadow-xl transition-all">
+                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
 
-                                    <div className="py-4 sm:py-6 lg:py-8 px-2 sm:px-4 mx-auto max-w-screen-md">
+                                    <div className="py-8 lg:py-8 px-4 mx-auto max-w-screen-md">
                                         <div className="flex flex-shrink-0 items-center justify-center">
                                             <Link href="/" className='flex items-center'>
                                                 <Image 
@@ -101,11 +91,11 @@ const Contactusform = () => {
                                                     alt="POSSPOLE CATALYST" 
                                                     width={280} 
                                                     height={80}
-                                                    className="h-8 sm:h-10 lg:h-12 w-auto"
+                                                    className="h-12 w-auto"
                                                 />
                                             </Link>
                                         </div>
-                                        <p className="mb-6 sm:mb-8 lg:mb-16 mt-4 sm:mt-6 lg:mt-8 font-light text-center text-gray-500 dark:text-gray-400 text-sm sm:text-base lg:text-xl">Contact us now? Want to send us a feedback?</p>
+                                        <p className="mb-8 lg:mb-16 mt-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Contact us now? Want to send us a feedback?</p>
                                         <form action="#" className="space-y-8" onSubmit={handleSubmit}>
                                             <div>
                                                 <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Name</label>

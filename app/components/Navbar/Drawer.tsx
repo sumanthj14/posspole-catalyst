@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react";
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import Link from "next/link";
-import Image from "next/image";
 
 
 interface DrawerProps {
@@ -23,25 +22,19 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
         >
             <section
                 className={
-                    "w-80 max-w-sm left-0 absolute bg-white h-full shadow-xl delay-400 duration-500 ease-in-out transition-all transform " +
+                    "w-340px max-w-lg left-0 absolute bg-white h-full shadow-xl delay-400 duration-500 ease-in-out transition-all transform " +
                     (isOpen ? "translate-x-0" : "-translate-x-full")
                 }
             >
 
-                <article className="relative w-80 max-w-sm pb-10 flex flex-col space-y-6 h-full">
-                    <header className="px-4 py-4 flex items-center justify-between">
-                        <div className="flex flex-shrink-0 items-center">
-                            <Link href="/" className='flex items-center'>
-                                <Image 
-                                    src="/images/posspole-logo.svg" 
-                                    alt="POSSPOLE CATALYST" 
-                                    width={140} 
-                                    height={40}
-                                    className="h-8 w-auto"
-                                />
-                            </Link>
+                <article className="relative w-340px max-w-lg pb-10 flex flex-col space-y-6 h-full">
+                    <header className="px-4 py-4 flex items-center">
+
+                        <div className="flex flex-shrink-0 items-center border-right">
+                            {/* Logo space - can add logo here if needed */}
                         </div>
-                        <XMarkIcon className="block h-6 w-6 cursor-pointer hover:text-gray-600 transition-colors" onClick={() => {
+
+                        <XMarkIcon className="block h-6 w-6" onClick={() => {
                             setIsOpen(false);
                         }} />
                     </header>
