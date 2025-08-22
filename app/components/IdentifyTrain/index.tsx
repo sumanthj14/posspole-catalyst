@@ -3,7 +3,7 @@ const IdentifyTrain = () => {
         <div id="identify-train-section" className='mx-auto max-w-7xl px-4 py-24 my-32'>
             <div className='text-center mb-16'>
                 <h2 className='text-3xl lg:text-4xl font-bold text-bluegrey mb-16'>
-                    An EdTech operating under an "Identify and Train" model
+                    An EdTech operating under an &quot;Identify and Train&quot; model
                 </h2>
             </div>
 
@@ -13,11 +13,11 @@ const IdentifyTrain = () => {
                     Identify
                 </div>
                 <h3 className='text-3xl lg:text-4xl font-bold text-black mb-8'>
-                    We're selecting talent that no one is looking for!
+                    We&apos;re selecting talent that no one is looking for!
                 </h3>
                 <p className='text-lg text-bluegrey max-w-4xl mx-auto leading-relaxed mb-16'>
                     Unearth new pools of digital talent from vast, untapped populations 
-                    with our unique "no-prerequisite, no experience" selection model.
+                    with our unique &quot;no-prerequisite, no experience&quot; selection model.
                 </p>
             </div>
 
@@ -27,7 +27,7 @@ const IdentifyTrain = () => {
                     Train
                 </div>
                 <h3 className='text-3xl lg:text-4xl font-bold text-black mb-8'>
-                    We're training to excellence, at scale!
+                    We&apos;re training to excellence, at scale!
                 </h3>
                 <p className='text-lg text-bluegrey max-w-4xl mx-auto leading-relaxed'>
                     Transform them into top-tier AI-ready & job-ready coders through teacherless, 
