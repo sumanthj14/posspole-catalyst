@@ -2,6 +2,8 @@ import Banner from './components/Banner/index';
 import Aboutus from './components/Aboutus/index';
 import IdentifyTrain from './components/IdentifyTrain/index';
 import IntensiveProgram from './components/IntensiveProgram/index';
+import HeroSection from './components/HeroSection/index';
+import CoFounders from './components/CoFounders/index';
 
 
 export default function Home() {
@@ -18,6 +20,12 @@ export default function Home() {
       </section>
       <section id="program" className="scroll-mt-20">
         <IntensiveProgram />
+      </section>
+      <section id="hero" className="scroll-mt-20">
+        <HeroSection />
+      </section>
+      <section id="cofounders" className="scroll-mt-20">
+        <CoFounders />
       </section>
     </main>
   )

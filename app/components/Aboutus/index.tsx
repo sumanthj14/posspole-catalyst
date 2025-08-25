@@ -8,12 +8,15 @@ const Aboutus = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
                     <div className='col-span-6 flex justify-center'>
                         <div className="flex flex-col align-middle justify-center p-10">
-                            <p className='text-4xl lg:text-6xl pt-4 font-bold lh-81 text-center lg:text-start'>About Posspole People</p>
-                            <h4 className='text-lg pt-4 font-normal lh-33 text-center lg:text-start text-bluegrey'>
-                                Posspole People is a catalyst for unlocking human potential and building thriving local and global ecosystems through innovation, creativity, and collaboration.
+                            <p className='text-4xl lg:text-6xl pt-4 font-bold lh-81 text-center lg:text-start'>About Us</p>
+                            <h4 className='text-base pt-4 font-normal lh-33 text-center lg:text-start text-bluegrey'>
+                                Posspole Catalyst is for unlocking human potential and building thriving local and global ecosystems through innovation, creativity, and collaboration.
                             </h4>
                             <p className='text-base pt-4 font-normal lh-33 text-center lg:text-start text-bluegrey'>
                                 We believe talent exists everywhere — in every background, every community, and every unconventional path. Our work is rooted in identifying hidden potential, nurturing it through transformative learning and real-world projects, and connecting it to opportunities that create impact.
+                            </p>
+                            <p className='text-base pt-4 font-normal lh-33 text-center lg:text-start text-bluegrey'>
+                                By combining human-centered design, collective intelligence, and forward-thinking pedagogy, we empower individuals to thrive in the rapidly evolving world of technology, creativity, and problem-solving. Posspole Catalyst brings together diverse minds, future-focused skills, and community-driven action to create change that lasts.
                             </p>
                         </div>
                     </div>

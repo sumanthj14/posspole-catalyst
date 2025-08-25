@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
-import Contactusform from './Contactus';
+import Signup from './Signup';
 
 interface NavigationItem {
     name: string;
@@ -43,11 +43,11 @@ const Navbar = () => {
     }, []);
 
     return (
-        <Disclosure as="nav" className={`navbar transition-all duration-300 ease-out ${isScrolled ? 'fixed top-0 w-full z-50 bg-white/95 shadow-lg backdrop-blur-md border-b border-gray-200/50' : 'relative bg-transparent'}`}>
+        <Disclosure as="nav" className={`navbar transition-all duration-300 ease-out ${isScrolled ? 'fixed top-0 w-full z-50 bg-white shadow-lg border-b border-gray-200/50' : 'relative bg-white shadow-sm'}`}>
             <>
                 <div className={`mx-auto max-w-7xl transition-all duration-300 ease-out ${isScrolled ? 'px-4 py-2 sm:px-6 lg:px-8' : 'px-4 py-3 sm:px-6 md:py-4 lg:px-8'}`}>
                     <div className={`relative flex items-center justify-between transition-all duration-300 ease-out ${isScrolled ? 'h-12' : 'h-12 sm:h-16 lg:h-20'}`}>
-                        <div className="flex flex-1 items-center sm:justify-between">
+                        <div className="flex flex-1 items-center justify-between">
 
                             {/* LOGO */}
 
@@ -80,8 +80,11 @@ const Navbar = () => {
                                 </div>
 
                             </div>
-                            {/* <button className='hidden lg:flex justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-navyblue hover:text-white'>Contact us</button> */}
-                            <Contactusform />
+                            
+                            {/* SIGNUP BUTTON */}
+                            <div className="flex items-center">
+                                <Signup />
+                            </div>
                         </div>
 
 

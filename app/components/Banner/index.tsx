@@ -18,7 +18,6 @@ const Banner = () => {
             {/* Content */}
             <div className='relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-20'>
                 <div className='text-center text-white'>
-
                     
                     <div className="py-8">
                         <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6'>
@@ -27,6 +26,16 @@ const Banner = () => {
                         </h1>
                         <div className='text-2xl md:text-4xl font-bold mb-8 text-yellow-400'>
                             1,000,000+ AI-ready developers by 2040
+                        </div>
+                        {/* Logo */}
+                        <div className='flex justify-center items-center mt-8'>
+                            <Image 
+                                src="/image.png" 
+                                alt="Partner Logo" 
+                                width={250} 
+                                height={100} 
+                                className='h-20 lg:h-24 w-auto filter brightness-0 invert'
+                            />
                         </div>
                         {/* <p className='text-xl md:text-2xl font-light mb-8 max-w-5xl mx-auto leading-relaxed'>
                             A proven, peer-to-peer and transformative tech platform to develop AI-ready tech skills, at scale
