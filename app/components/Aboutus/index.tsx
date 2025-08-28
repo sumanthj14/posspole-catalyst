@@ -2,46 +2,46 @@ import Image from "next/image";
 
 const Aboutus = () => {
     return (
-        <div id="about-section" className='mx-auto max-w-7xl px-4 py-24 my-32'>
+        <section id="about-section" className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 my-16 sm:my-20 md:my-24 lg:my-32' aria-labelledby="about-heading">
             {/* About Posspole People Section */}
-            <div className='bg-lightgrey rounded-3xl relative p-8 lg:p-16 mb-20'>
-                <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
-                    <div className='col-span-6 flex justify-center'>
-                        <div className="flex flex-col align-middle justify-center p-10">
-                            <p className='text-4xl lg:text-6xl pt-4 font-bold lh-81 text-center lg:text-start'>About Us</p>
-                            <h4 className='text-base pt-4 font-normal lh-33 text-center lg:text-start text-bluegrey'>
+            <article className='bg-lightgrey rounded-2xl sm:rounded-3xl relative p-6 sm:p-8 md:p-12 lg:p-16 mb-12 sm:mb-16 md:mb-20' role="region" aria-labelledby="about-heading">
+                <div className='grid grid-cols-1 lg:grid-cols-12 my-8 sm:my-12 md:my-16'>
+                    <div className='col-span-12 lg:col-span-6 flex justify-center mb-8 lg:mb-0'>
+                        <div className="flex flex-col align-middle justify-center p-4 sm:p-6 md:p-8 lg:p-10">
+                            <h2 id="about-heading" className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl pt-2 sm:pt-4 font-bold lh-81 text-center lg:text-start'>About Us</h2>
+                            <h4 className='text-sm sm:text-base pt-3 sm:pt-4 font-normal lh-33 text-center lg:text-start text-bluegrey'>
                                 Posspole Catalyst is for unlocking human potential and building thriving local and global ecosystems through innovation, creativity, and collaboration.
                             </h4>
-                            <p className='text-base pt-4 font-normal lh-33 text-center lg:text-start text-bluegrey'>
+                            <p className='text-sm sm:text-base pt-3 sm:pt-4 font-normal lh-33 text-center lg:text-start text-bluegrey'>
                                 We believe talent exists everywhere — in every background, every community, and every unconventional path. Our work is rooted in identifying hidden potential, nurturing it through transformative learning and real-world projects, and connecting it to opportunities that create impact.
                             </p>
-                            <p className='text-base pt-4 font-normal lh-33 text-center lg:text-start text-bluegrey'>
+                            <p className='text-sm sm:text-base pt-3 sm:pt-4 font-normal lh-33 text-center lg:text-start text-bluegrey'>
                                 By combining human-centered design, collective intelligence, and forward-thinking pedagogy, we empower individuals to thrive in the rapidly evolving world of technology, creativity, and problem-solving. Posspole Catalyst brings together diverse minds, future-focused skills, and community-driven action to create change that lasts.
                             </p>
                         </div>
                     </div>
 
-                    <div className='col-span-6 flex justify-center'>
+                    <div className='col-span-12 lg:col-span-6 flex justify-center'>
                         <div className="flex flex-col align-middle justify-center">
-                            <div className="flex align-middle justify-center mb-10">
-                                <Image src="/images/team/teamimg.png" alt="team collaboration" width={636} height={808} className='rounded-2xl' />
-                            </div>
+                            <figure className="flex align-middle justify-center mb-6 sm:mb-8 md:mb-10">
+                                <Image src="/images/team/teamimg.png" alt="Diverse team of professionals collaborating on innovative technology projects at POSSPOLE CATALYST" width={636} height={808} className='rounded-xl sm:rounded-2xl w-full max-w-md lg:max-w-full h-auto' />
+                            </figure>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
             {/* Vision & Mission Section */}
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20'>
-                <div className='bg-white p-8 rounded-2xl shadow-lg'>
-                    <h3 className='text-3xl font-bold text-blue mb-6'>Vision</h3>
-                    <p className='text-lg text-bluegrey leading-relaxed'>
+            <section className='grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 mb-12 sm:mb-16 md:mb-20' aria-labelledby="vision-mission-heading">
+                <article className='bg-white p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg' role="region" aria-labelledby="vision-heading">
+                    <h3 id="vision-heading" className='text-2xl sm:text-3xl font-bold text-blue mb-4 sm:mb-6'>Vision</h3>
+                    <p className='text-base sm:text-lg text-bluegrey leading-relaxed'>
                         To create a world where everyone, regardless of background or circumstance, can access the tools, skills, and networks to become a driving force for innovation, social impact, and positive change.
                     </p>
-                </div>
+                </article>
                 
-                <div className='bg-white p-8 rounded-2xl shadow-lg'>
-                    <h3 className='text-3xl font-bold text-blue mb-6'>Mission</h3>
+                <article className='bg-white p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg' role="region" aria-labelledby="mission-heading">
+                    <h3 id="mission-heading" className='text-2xl sm:text-3xl font-bold text-blue mb-4 sm:mb-6'>Mission</h3>
                     <ul className='space-y-4 text-bluegrey'>
                         <li className='flex items-start'>
                             <span className='text-blue font-bold mr-3'>•</span>
@@ -74,60 +74,60 @@ const Aboutus = () => {
                             </div>
                         </li>
                     </ul>
-                </div>
-            </div>
+                </article>
+            </section>
 
             {/* Posspole Catalyst Platform Section */}
-            <div className='bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-8 lg:p-16'>
-                <div className='text-center mb-12'>
-                    <h2 className='text-4xl lg:text-5xl font-bold text-blue mb-6'>POSSPOLE CATALYST</h2>
-                    <p className='text-xl text-bluegrey max-w-4xl mx-auto'>
+            <section className='bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16' aria-labelledby="platform-heading">
+                <header className='text-center mb-8 sm:mb-10 md:mb-12'>
+                    <h2 id="platform-heading" className='text-3xl sm:text-4xl md:text-5xl font-bold text-blue mb-4 sm:mb-6 px-2'>POSSPOLE CATALYST</h2>
+                    <p className='text-lg sm:text-xl text-bluegrey max-w-4xl mx-auto px-4'>
                         A Project-based platform that nurtures AI-ready and creative talents.
                     </p>
-                </div>
+                </header>
 
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12'>
-                    <div className='space-y-6'>
-                        <div className='bg-white p-6 rounded-xl shadow-md'>
-                            <h4 className='text-xl font-bold text-blue mb-3'>Peer-to-Peer Learning</h4>
-                            <p className='text-bluegrey'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 mb-8 sm:mb-10 md:mb-12' role="list">
+                    <div className='space-y-4 sm:space-y-6' role="listitem">
+                        <article className='bg-white p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-md' role="region" aria-labelledby="peer-learning-heading">
+                            <h4 id="peer-learning-heading" className='text-lg sm:text-xl font-bold text-blue mb-2 sm:mb-3'>Peer-to-Peer Learning</h4>
+                            <p className='text-sm sm:text-base text-bluegrey'>
                                 By harnessing peer-to-peer pedagogy, learning is facilitated through a collective and co-creative process in a professional environment.
                             </p>
-                        </div>
+                        </article>
                         
-                        <div className='bg-white p-6 rounded-xl shadow-md'>
-                            <h4 className='text-xl font-bold text-blue mb-3'>Talent Discovery</h4>
-                            <p className='text-bluegrey'>
+                        <article className='bg-white p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-md' role="region" aria-labelledby="talent-discovery-heading">
+                            <h4 id="talent-discovery-heading" className='text-lg sm:text-xl font-bold text-blue mb-2 sm:mb-3'>Talent Discovery</h4>
+                            <p className='text-sm sm:text-base text-bluegrey'>
                                 POSSPOLE CATALYST platform harnesses online tools and cognitive games to identify unrevealed talents within a large population.
                             </p>
-                        </div>
+                        </article>
                     </div>
 
-                    <div className='space-y-6'>
-                        <div className='bg-white p-6 rounded-xl shadow-md'>
-                            <h4 className='text-xl font-bold text-blue mb-3'>Merit-Based Access</h4>
-                            <p className='text-bluegrey'>
+                    <div className='space-y-4 sm:space-y-6' role="listitem">
+                        <article className='bg-white p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-md' role="region" aria-labelledby="merit-access-heading">
+                            <h4 id="merit-access-heading" className='text-lg sm:text-xl font-bold text-blue mb-2 sm:mb-3'>Merit-Based Access</h4>
+                            <p className='text-sm sm:text-base text-bluegrey'>
                                 Based on merit, it is open to all backgrounds, especially those who don&apos;t succeed in traditional education systems and gives them access to high-quality education.
                             </p>
-                        </div>
+                        </article>
                         
-                        <div className='bg-white p-6 rounded-xl shadow-md'>
-                            <h4 className='text-xl font-bold text-blue mb-3'>AI-Ready Curriculum</h4>
-                            <p className='text-bluegrey'>
+                        <article className='bg-white p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-md' role="region" aria-labelledby="ai-curriculum-heading">
+                            <h4 id="ai-curriculum-heading" className='text-lg sm:text-xl font-bold text-blue mb-2 sm:mb-3'>AI-Ready Curriculum</h4>
+                            <p className='text-sm sm:text-base text-bluegrey'>
                                 Cutting-edge AI-ready curriculum based on creative confrontation, creating the right skills to navigate the AI wave.
                             </p>
-                        </div>
+                        </article>
                     </div>
                 </div>
 
-                <div className='text-center bg-white p-8 rounded-2xl shadow-lg'>
-                    <h3 className='text-2xl font-bold text-blue mb-4'>Natively AI-ready to produce future-proof coders</h3>
-                    <p className='text-lg text-bluegrey'>
+                <footer className='text-center bg-white p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg'>
+                    <h3 className='text-xl sm:text-2xl font-bold text-blue mb-3 sm:mb-4 px-2'>Natively AI-ready to produce future-proof coders</h3>
+                    <p className='text-base sm:text-lg text-bluegrey px-4'>
                         Creating the right skills to navigate the AI wave by leveraging collective intelligence to make the most of the combination of Artificial and Human Intelligence.
                     </p>
-                </div>
-            </div>
-        </div>
+                </footer>
+            </section>
+        </section>
     )
 }
 

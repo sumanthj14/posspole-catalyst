@@ -1,13 +1,26 @@
-
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === "production";
-
 const nextConfig = {
-  basePath: isProd ? "/Posspole-catalyst" : "",
-  assetPrefix: isProd ? "/Posspole-catalyst/" : "",
-  // output: "export", // Commented out for development - uncomment for production build
+  // Minimal production configuration to avoid permission issues
+  output: 'export',
+  basePath: '/Posspole-catalyst',
+  assetPrefix: '/Posspole-catalyst/',
   images: {
     unoptimized: true,
+  },
+  reactStrictMode: true,
+  poweredByHeader: false,
+  
+  // Disable all experimental features
+  experimental: {},
+  
+  // ESLint configuration
+  eslint: {
+    dirs: ['app', 'components'],
+  },
+  
+  // TypeScript configuration
+  typescript: {
+    ignoreBuildErrors: false,
   },
 };
 

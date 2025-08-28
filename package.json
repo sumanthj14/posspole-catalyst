@@ -7,8 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy":  "touch out/.nojekyll && gh-pages -d out --dotfiles"
+    "build:prod": "cross-env NODE_ENV=production next build",
+    "build:analyze": "cross-env ANALYZE=true npm run build",
+    "predeploy": "npm run build:prod && npm run verify:build",
+    "deploy": "node deploy.js",
+    "deploy:manual": "touch out/.nojekyll && gh-pages -d out --dotfiles",
+    "clean": "rimraf .next out",
+    "verify": "npm run lint && npm run build:prod",
+    "verify:build": "node verify-build.js"
   },
   "dependencies": {
     "@headlessui/react": "^2.1.9",
@@ -30,6 +36,8 @@
   },
   "devDependencies": {
     "@types/react-slick": "^0.23.13",
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "cross-env": "^7.0.3",
+    "rimraf": "^5.0.5"
   }
 }

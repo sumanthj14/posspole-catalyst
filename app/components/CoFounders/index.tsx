@@ -42,7 +42,7 @@ const CoFounders = () => {
               {/* Quote */}
               <div className="mb-6">
                 <blockquote className="text-lg text-gray-700 leading-relaxed italic">
-                  "{founder.quote}"
+                  &ldquo;{founder.quote}&rdquo;
                 </blockquote>
               </div>
 

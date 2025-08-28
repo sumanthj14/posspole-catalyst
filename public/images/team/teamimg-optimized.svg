@@ -1,0 +1,58 @@
+<svg width="636" height="808" viewBox="0 0 636 808" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="636" height="808" fill="#f8fafc" rx="12"/>
+  
+  <!-- Team illustration placeholder -->
+  <g transform="translate(50, 100)">
+    <!-- Person 1 -->
+    <circle cx="120" cy="150" r="40" fill="#3b82f6"/>
+    <rect x="80" y="200" width="80" height="120" rx="8" fill="#1e40af"/>
+    
+    <!-- Person 2 -->
+    <circle cx="280" cy="130" r="35" fill="#10b981"/>
+    <rect x="245" y="175" width="70" height="110" rx="8" fill="#059669"/>
+    
+    <!-- Person 3 -->
+    <circle cx="420" cy="160" r="38" fill="#f59e0b"/>
+    <rect x="382" y="208" width="76" height="115" rx="8" fill="#d97706"/>
+    
+    <!-- Person 4 -->
+    <circle cx="180" cy="320" r="42" fill="#8b5cf6"/>
+    <rect x="138" y="372" width="84" height="125" rx="8" fill="#7c3aed"/>
+    
+    <!-- Person 5 -->
+    <circle cx="350" cy="340" r="36" fill="#ef4444"/>
+    <rect x="314" y="386" width="72" height="112" rx="8" fill="#dc2626"/>
+  </g>
+  
+  <!-- Collaboration elements -->
+  <g stroke="#6b7280" stroke-width="2" fill="none" opacity="0.3">
+    <line x1="170" y1="250" x2="230" y2="230"/>
+    <line x1="330" y1="230" x2="370" y2="260"/>
+    <line x1="220" y1="420" x2="280" y2="440"/>
+    <line x1="400" y1="440" x2="450" y2="420"/>
+  </g>
+  
+  <!-- Technology symbols -->
+  <g fill="#6b7280" opacity="0.2">
+    <!-- Laptop -->
+    <rect x="480" y="500" width="100" height="60" rx="4"/>
+    <rect x="485" y="505" width="90" height="45" rx="2" fill="#1f2937"/>
+    
+    <!-- Code brackets -->
+    <text x="100" y="600" font-family="monospace" font-size="24" fill="#374151">&lt;/&gt;</text>
+    
+    <!-- Gear -->
+    <circle cx="500" y="650" r="20" stroke="#6b7280" stroke-width="3" fill="none"/>
+    <circle cx="500" y="650" r="8" fill="#6b7280"/>
+  </g>
+  
+  <!-- Company branding area -->
+  <rect x="50" y="700" width="536" height="80" rx="8" fill="#e5e7eb" opacity="0.5"/>
+  <text x="318" y="745" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#374151">POSSPOLE CATALYST TEAM</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="580" cy="100" r="15" fill="#3b82f6" opacity="0.3"/>
+  <circle cx="60" cy="750" r="12" fill="#10b981" opacity="0.3"/>
+  <rect x="550" y="300" width="20" height="20" rx="4" fill="#f59e0b" opacity="0.3"/>
+</svg>

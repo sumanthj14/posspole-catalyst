@@ -56,9 +56,12 @@ const Signup = () => {
     setIsSubmitting(false);
   };
 
-  const openModal = () => {
-    setIsOpen(true);
-  };
+  const openModal = (e?: React.MouseEvent) => {
+        e?.preventDefault();
+        e?.stopPropagation();
+        console.log('Signup button clicked!');
+        setIsOpen(true);
+    };
 
   const handleUserTypeSelect = (type: UserType) => {
     setSelectedUserType(type);
@@ -95,7 +98,7 @@ const Signup = () => {
 
       if (response.ok) {
         setSubmitStatus('success');
-        setSubmitMessage('Thank you! We\'ll get back to you shortly.');
+        setSubmitMessage('Thank you! We&apos;ll get back to you shortly.');
         // Reset form after successful submission
         setTimeout(() => {
           closeModal();
@@ -113,53 +116,53 @@ const Signup = () => {
 
   const renderUserTypeSelection = () => (
     <div className="text-center">
-      <Dialog.Title as="h3" className="text-2xl font-bold leading-6 text-gray-900 mb-8">
+      <Dialog.Title as="h3" className="text-xl sm:text-2xl font-bold leading-6 text-gray-900 mb-6 sm:mb-8 px-2">
         Signup As
       </Dialog.Title>
       
-      <div className="space-y-4 mb-12">
-        <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+      <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-12">
+        <label className="flex items-center p-3 sm:p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors min-h-[3rem] sm:min-h-[3.5rem]">
           <input
             type="radio"
             name="userType"
             value="student"
             checked={selectedUserType === 'student'}
             onChange={() => handleUserTypeSelect('student')}
-            className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+            className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 border-gray-300 focus:ring-blue-500"
           />
-          <span className="ml-3 text-lg font-medium text-gray-900">Student</span>
+          <span className="ml-3 text-base sm:text-lg font-medium text-gray-900">Student</span>
         </label>
         
-        <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+        <label className="flex items-center p-3 sm:p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors min-h-[3rem] sm:min-h-[3.5rem]">
           <input
             type="radio"
             name="userType"
             value="university"
             checked={selectedUserType === 'university'}
             onChange={() => handleUserTypeSelect('university')}
-            className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+            className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 border-gray-300 focus:ring-blue-500"
           />
-          <span className="ml-3 text-lg font-medium text-gray-900">University / Institute</span>
+          <span className="ml-3 text-base sm:text-lg font-medium text-gray-900">University / Institute</span>
         </label>
         
-        <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+        <label className="flex items-center p-3 sm:p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors min-h-[3rem] sm:min-h-[3.5rem]">
           <input
             type="radio"
             name="userType"
             value="corporate"
             checked={selectedUserType === 'corporate'}
             onChange={() => handleUserTypeSelect('corporate')}
-            className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+            className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 border-gray-300 focus:ring-blue-500"
           />
-          <span className="ml-3 text-lg font-medium text-gray-900">Corporates</span>
+          <span className="ml-3 text-base sm:text-lg font-medium text-gray-900">Corporates</span>
         </label>
       </div>
       
-      <div className="mt-8">
+      <div className="mt-6 sm:mt-8">
          <button
            onClick={handleContinue}
            disabled={!selectedUserType}
-           className="w-full py-4 px-6 bg-transparent hover:bg-navyblue hover:text-white disabled:bg-gray-300 disabled:cursor-not-allowed text-gray-700 font-semibold rounded-lg transition-colors border-2 border-gray-300 navbutton"
+           className="w-full py-3 sm:py-4 px-4 sm:px-6 bg-transparent hover:bg-navyblue hover:text-white disabled:bg-gray-300 disabled:cursor-not-allowed text-gray-700 font-semibold rounded-lg transition-colors border-2 border-gray-300 navbutton min-h-[3rem] sm:min-h-[3.5rem] text-base sm:text-lg"
          >
            Continue
          </button>
@@ -169,11 +172,11 @@ const Signup = () => {
 
   const renderStudentForm = () => (
     <div>
-      <Dialog.Title as="h3" className="text-2xl font-bold leading-6 text-gray-900 mb-6 text-center">
+      <Dialog.Title as="h3" className="text-xl sm:text-2xl font-bold leading-6 text-gray-900 mb-4 sm:mb-6 text-center px-2">
         Student Signup
       </Dialog.Title>
       
-      <form onSubmit={handleFormSubmit} action="https://formspree.io/f/xgvlwbze" method="POST" className="space-y-4">
+      <form onSubmit={handleFormSubmit} action="https://formspree.io/f/xgvlwbze" method="POST" className="space-y-3 sm:space-y-4">
         <input type="hidden" name="userType" value="Student" />
         <div>
           <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">
@@ -186,7 +189,7 @@ const Signup = () => {
             value={formData.fullName || ''}
             onChange={handleInputChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-3 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base min-h-[2.75rem]"
             placeholder="Enter your full name"
           />
         </div>
@@ -202,7 +205,7 @@ const Signup = () => {
             value={formData.dateOfBirth || ''}
             onChange={handleInputChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-3 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base min-h-[2.75rem]"
           />
         </div>
         
@@ -215,7 +218,7 @@ const Signup = () => {
             name="gender"
             value={formData.gender || ''}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-3 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base min-h-[2.75rem]"
           >
             <option value="">Select gender</option>
             <option value="male">Male</option>
@@ -236,7 +239,7 @@ const Signup = () => {
             value={formData.email || ''}
             onChange={handleInputChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-3 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base min-h-[2.75rem]"
             placeholder="Enter your email address"
           />
         </div>
@@ -252,7 +255,7 @@ const Signup = () => {
             value={formData.phone || ''}
             onChange={handleInputChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-3 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base min-h-[2.75rem]"
             placeholder="Enter your phone number"
           />
         </div>
@@ -288,7 +291,7 @@ const Signup = () => {
                 value={formData.institutionName || ''}
                 onChange={handleInputChange}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-3 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base min-h-[2.75rem]"
                 placeholder="Enter your institution name"
               />
             </div>
@@ -303,7 +306,7 @@ const Signup = () => {
                 value={formData.studyLevel || ''}
                 onChange={handleInputChange}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-3 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base min-h-[2.75rem]"
               >
                 <option value="">Select level of study</option>
                 <option value="undergraduate">Undergraduate</option>
@@ -348,7 +351,7 @@ const Signup = () => {
         
         <div>
           <label htmlFor="additionalInfo" className="block text-sm font-medium text-gray-700 mb-1">
-            Share anything you'd like us to know
+            Share anything you&apos;d like us to know
           </label>
           <textarea
             id="additionalInfo"
@@ -357,7 +360,7 @@ const Signup = () => {
             onChange={handleInputChange}
             rows={4}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            placeholder="Tell us anything else you'd like us to know about you..."
+            placeholder="Tell us anything else you&apos;d like us to know about you..."
           />
         </div>
         
@@ -374,7 +377,7 @@ const Signup = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full py-4 px-6 bg-transparent hover:bg-navyblue hover:text-white text-gray-700 font-semibold rounded-lg transition-colors border-2 border-gray-300 navbutton disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full py-3 sm:py-4 px-4 sm:px-6 bg-transparent hover:bg-navyblue hover:text-white text-gray-700 font-semibold rounded-lg transition-colors border-2 border-gray-300 navbutton disabled:opacity-50 disabled:cursor-not-allowed text-base min-h-[3rem] sm:min-h-[3.5rem]"
         >
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
@@ -524,7 +527,7 @@ const Signup = () => {
             value={formData.additionalInfo || ''}
             onChange={handleInputChange}
             rows={4}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-vertical"
+            className="w-full px-3 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-vertical text-base min-h-[5rem]"
             placeholder="Please provide any additional information about your university/institute or specific requirements..."
           />
         </div>
@@ -542,7 +545,7 @@ const Signup = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full py-4 px-6 bg-transparent hover:bg-navyblue hover:text-white text-gray-700 font-semibold rounded-lg transition-colors border-2 border-gray-300 navbutton disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full py-3 sm:py-4 px-4 sm:px-6 bg-transparent hover:bg-navyblue hover:text-white text-gray-700 font-semibold rounded-lg transition-colors border-2 border-gray-300 navbutton disabled:opacity-50 disabled:cursor-not-allowed text-base min-h-[3rem] sm:min-h-[3.5rem]"
         >
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
@@ -721,7 +724,7 @@ const Signup = () => {
             value={formData.requirement || ''}
             onChange={handleInputChange}
             rows={4}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-vertical"
+            className="w-full px-3 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-vertical text-base min-h-[5rem]"
             placeholder="Please provide any additional information about your company or specific requirements..."
           />
         </div>
@@ -739,7 +742,7 @@ const Signup = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full py-4 px-6 bg-transparent hover:bg-navyblue hover:text-white text-gray-700 font-semibold rounded-lg transition-colors border-2 border-gray-300 navbutton disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full py-3 sm:py-4 px-4 sm:px-6 bg-transparent hover:bg-navyblue hover:text-white text-gray-700 font-semibold rounded-lg transition-colors border-2 border-gray-300 navbutton disabled:opacity-50 disabled:cursor-not-allowed text-base min-h-[3rem] sm:min-h-[3.5rem]"
         >
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
@@ -769,15 +772,16 @@ const Signup = () => {
       <div className="flex items-center">
         <button 
           type="button" 
-          className='justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-navyblue hover:text-white text-gray-700'
+          className='justify-end text-lg sm:text-xl font-semibold bg-transparent py-3 sm:py-4 px-4 sm:px-6 lg:px-12 navbutton rounded-full hover:bg-navyblue hover:text-white text-gray-700 cursor-pointer min-h-[44px] sm:min-h-[48px] min-w-[80px] sm:min-w-[100px]'
           onClick={openModal}
+          style={{ zIndex: 1000, position: 'relative' }}
         >
           Signup
         </button>
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-50" onClose={closeModal}>
+        <Dialog as="div" className="relative z-[9999]" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -787,11 +791,11 @@ const Signup = () => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-50" />
+            <div className="fixed inset-0 bg-black bg-opacity-75" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center py-8">
+            <div className="flex min-h-full items-center justify-center p-2 sm:p-4 text-center py-4 sm:py-8">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -801,13 +805,14 @@ const Signup = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all relative">
+                <Dialog.Panel className="w-full max-w-sm sm:max-w-md lg:max-w-lg transform rounded-xl sm:rounded-2xl bg-white p-4 sm:p-6 text-left align-middle shadow-xl transition-all relative max-h-[90vh] overflow-y-auto">
                   {/* Close button */}
                   <button
                     onClick={closeModal}
-                    className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                    className="absolute top-2 right-2 sm:top-3 sm:right-3 text-gray-400 hover:text-gray-600 transition-colors p-2 sm:p-3 rounded-full hover:bg-gray-100 min-h-[44px] min-w-[44px] sm:min-h-[48px] sm:min-w-[48px] flex items-center justify-center"
+                    aria-label="Close modal"
                   >
-                    <XMarkIcon className="h-6 w-6" />
+                    <XMarkIcon className="h-5 w-5 sm:h-6 sm:w-6" />
                   </button>
                   
                   {renderContent()}

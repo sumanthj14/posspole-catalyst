@@ -166,11 +166,94 @@ button:focus, a:focus, input:focus, textarea:focus, select:focus {
   transition: outline 0.2s ease;
 }
 
-/* Improved touch targets for mobile */
+/* Enhanced touch targets for mobile devices */
 @media (max-width: 768px) {
-  button, a {
+  /* Minimum touch target size for all interactive elements */
+  button, a, input[type="button"], input[type="submit"], input[type="reset"], 
+  label[for], [role="button"], [tabindex="0"] {
     min-height: 44px;
     min-width: 44px;
+    padding: 8px 12px;
+  }
+  
+  /* Specific optimizations for small buttons */
+  button[aria-label*="Close"], button[aria-label*="close"], 
+  .close-button, [aria-label*="menu"] {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 12px;
+  }
+  
+  /* Navigation links touch targets */
+  .navlinks {
+    min-height: 48px;
+    padding: 12px 16px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Form elements touch targets */
+  input, textarea, select {
+    min-height: 44px;
+    padding: 12px 16px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  /* Radio buttons and checkboxes */
+  input[type="radio"], input[type="checkbox"] {
+    min-height: 20px;
+    min-width: 20px;
+    transform: scale(1.2);
+  }
+  
+  /* Labels for radio/checkbox should be larger touch targets */
+  label:has(input[type="radio"]), label:has(input[type="checkbox"]) {
+    min-height: 48px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+/* Enhanced mobile touch interaction improvements */
+@media (max-width: 768px) {
+  /* Improved spacing between interactive elements */
+  button + button, a + a, button + a, a + button {
+    margin-left: 8px;
+  }
+  
+  /* Stack interactive elements with proper spacing */
+  .space-y-2 > * + *, .space-y-3 > * + *, .space-y-4 > * + * {
+    margin-top: 12px !important;
+  }
+  
+  /* Enhanced hover/active states for touch devices */
+  button:hover, a:hover, [role="button"]:hover {
+    transform: scale(1.02);
+    transition: transform 0.1s ease;
+  }
+  
+  button:active, a:active, [role="button"]:active {
+    transform: scale(0.98);
+    transition: transform 0.05s ease;
+  }
+  
+  /* Prevent text selection on buttons for better touch experience */
+  button, [role="button"], .navlinks {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Improve focus visibility on touch devices */
+  button:focus-visible, a:focus-visible, [role="button"]:focus-visible {
+    outline: 3px solid #3b82f6;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
   }
 }
 
@@ -184,6 +267,148 @@ button:focus, a:focus, input:focus, textarea:focus, select:focus {
 .navbar, .navbar * {
   will-change: transform, opacity;
   transform: translateZ(0);
+}
+
+/* Loading states and skeleton screens */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Button loading states */
+.btn-loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: btn-spin 1s linear infinite;
+}
+
+@keyframes btn-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Link loading states */
+.link-loading {
+  opacity: 0.7;
+  pointer-events: none;
+  position: relative;
+}
+
+.link-loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: inherit;
+}
+
+/* Pulse animation for loading indicators */
+.pulse-loading {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Skeleton text lines */
+.skeleton-text {
+  height: 1em;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+  border-radius: 4px;
+  margin: 4px 0;
+}
+
+.skeleton-text.short {
+  width: 60%;
+}
+
+.skeleton-text.medium {
+  width: 80%;
+}
+
+.skeleton-text.long {
+  width: 100%;
+}
+
+/* Loading overlay */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: inherit;
+}
+
+.loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
 
 /* Fade-in animation for scroll effects */
