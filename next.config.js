@@ -1,17 +1,25 @@
+
 /** @type {import('next').NextConfig} */
+const buildConfig = require('./build.config.js');
+
+const env = process.env.NODE_ENV || 'development';
+const config = buildConfig[env] || buildConfig.development;
+
 const nextConfig = {
-  // Minimal production configuration to avoid permission issues
-  output: 'export',
-  basePath: '/Posspole-catalyst',
-  assetPrefix: '/Posspole-catalyst/',
-  images: {
-    unoptimized: true,
-  },
+  ...config,
+  // Additional Next.js specific configurations
   reactStrictMode: true,
+  swcMinify: true,
   poweredByHeader: false,
   
-  // Disable all experimental features
-  experimental: {},
+  // Performance optimizations
+  compress: true,
+  
+  // Disable experimental features that might cause permission issues
+  experimental: {
+    ...config.experimental,
+    instrumentationHook: false,
+  },
   
   // ESLint configuration
   eslint: {
@@ -21,6 +29,24 @@ const nextConfig = {
   // TypeScript configuration
   typescript: {
     ignoreBuildErrors: false,
+  },
+  
+  // Webpack configuration for optimization
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      // Optimize bundle size
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\\/]node_modules[\\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
+    }
+    return config;
   },
 };
 

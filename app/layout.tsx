@@ -1,4 +1,4 @@
-import './globals.css';
+import './styles.css';
 import { Nunito } from 'next/font/google';
 import Navbar from './components/Navbar/index';
 import Footer from './components/Footer/index';

@@ -19,7 +19,7 @@ const buildConfig = {
       unoptimized: true,
     },
     experimental: {
-      optimizeCss: true,
+      optimizeCss: false,
     },
     compiler: {
       removeConsole: process.env.NODE_ENV === 'production',
