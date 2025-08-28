@@ -1,8 +1,18 @@
 # Headers for Cloudflare Pages
 
-# CSS files
-*.css
+# Next.js static assets - most specific rules first
+/_next/static/css/*
   Content-Type: text/css
+  Cache-Control: public, max-age=31536000, immutable
+
+/_next/static/chunks/*
+  Content-Type: application/javascript
+  Cache-Control: public, max-age=31536000, immutable
+
+/_next/static/media/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/_next/static/*
   Cache-Control: public, max-age=31536000, immutable
 
 # JavaScript files
@@ -10,8 +20,26 @@
   Content-Type: application/javascript
   Cache-Control: public, max-age=31536000, immutable
 
-# Static assets
-/_next/static/*
+# CSS files
+*.css
+  Content-Type: text/css
+  Cache-Control: public, max-age=31536000, immutable
+
+# Font files
+*.woff
+  Content-Type: font/woff
+  Cache-Control: public, max-age=31536000, immutable
+
+*.woff2
+  Content-Type: font/woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+*.ttf
+  Content-Type: font/ttf
+  Cache-Control: public, max-age=31536000, immutable
+
+*.otf
+  Content-Type: font/otf
   Cache-Control: public, max-age=31536000, immutable
 
 # Images
@@ -33,4 +61,9 @@
 
 *.ico
   Content-Type: image/x-icon
+  Cache-Control: public, max-age=31536000, immutable
+
+# JSON files
+*.json
+  Content-Type: application/json
   Cache-Control: public, max-age=31536000, immutable
