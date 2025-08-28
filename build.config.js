@@ -12,14 +12,14 @@ const buildConfig = {
     },
   },
   production: {
-    basePath: '/Posspole-catalyst',
-    assetPrefix: '/Posspole-catalyst/',
+    basePath: '',
+    assetPrefix: '',
     output: 'export',
     images: {
       unoptimized: true,
     },
     experimental: {
-      optimizeCss: false,
+      optimizeCss: true,
     },
     compiler: {
       removeConsole: process.env.NODE_ENV === 'production',
