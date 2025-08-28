@@ -45,9 +45,26 @@ const nextConfig = {
           },
         },
       };
+      
+      // Additional optimizations for Cloudflare Pages
+      config.optimization.usedExports = true;
+      config.optimization.sideEffects = false;
     }
+    
+    // Fallback for Node.js modules in browser
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false,
+    };
+    
     return config;
   },
+  
+  // Additional optimizations for static export
+  generateEtags: false,
+  distDir: '.next',
 };
 
 module.exports = nextConfig;

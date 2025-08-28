@@ -8,6 +8,15 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    // Keep commonly used utility classes
+    'min-h-screen',
+    'overflow-x-hidden',
+    'text-center',
+    'flex',
+    'items-center',
+    'justify-center',
+  ],
   theme: {
     screens: {
       'sm': '640px',

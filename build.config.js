@@ -8,7 +8,7 @@ const buildConfig = {
       unoptimized: false,
     },
     experimental: {
-      optimizeCss: false,
+      optimizeCss: true,
     },
   },
   production: {
