@@ -36,8 +36,13 @@
   },
   "devDependencies": {
     "@types/react-slick": "^0.23.13",
-    "gh-pages": "^6.3.0",
     "cross-env": "^7.0.3",
+    "gh-pages": "^6.3.0",
+    "postcss-custom-properties": "^14.0.6",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^16.1.1",
+    "postcss-nested": "^7.0.2",
+    "postcss-preset-env": "^10.3.1",
     "rimraf": "^5.0.5"
   }
 }
