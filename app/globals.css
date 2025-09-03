@@ -136,15 +136,9 @@ body {
   }
 }
 
-/* Prevent animation blinking */
+/* Prevent animation blinking - Let Framer Motion handle its own initial states */
 [data-framer-motion="true"] {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-[data-framer-motion="true"][data-framer-appear-id] {
-  opacity: 1;
-  transform: translateY(0);
+  /* Remove conflicting styles - let Framer Motion control opacity and transform */
 }
 
 @keyframes fadeIn {

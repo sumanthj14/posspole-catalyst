@@ -23,18 +23,26 @@ const ScrollAnimation = ({
   const ref = useRef(null);
   const controls = useAnimation();
   const isInView = useInView(ref, { 
-    once: false, 
-    margin: '-100px 0px -100px 0px',
-    amount: 0.3
+    once: true, 
+    margin: '-20px 0px -20px 0px',
+    amount: 0.1
   });
 
   useEffect(() => {
     if (isInView) {
       controls.start('visible');
-    } else {
-      controls.start('hidden');
     }
   }, [isInView, controls]);
+
+  // Ensure element starts hidden and prevent initial flash
+  useEffect(() => {
+    controls.set('hidden');
+    // Small delay to ensure proper mounting
+    const timer = setTimeout(() => {
+      // Component is now ready for animations
+    }, 50);
+    return () => clearTimeout(timer);
+  }, [controls]);
 
   const getInitialPosition = () => {
     switch (direction) {
@@ -61,15 +69,16 @@ const ScrollAnimation = ({
     hidden: {
       ...getInitialPosition(),
       transition: {
-        duration: duration * 0.6,
-        delay: 0.1
+        duration: 0.3,
+        ease: [0.25, 0.46, 0.45, 0.94]
       }
     },
     visible: {
       ...getFinalPosition(),
       transition: {
         duration,
-        delay
+        delay,
+        ease: [0.25, 0.46, 0.45, 0.94]
       }
     }
   };
