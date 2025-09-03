@@ -117,7 +117,7 @@ const Signup = () => {
   const renderUserTypeSelection = () => (
     <div className="text-center">
       <Dialog.Title as="h3" className="text-xl sm:text-2xl font-bold leading-6 text-blue mb-6 sm:mb-8 px-2">
-        Signup As
+        SignUp As
       </Dialog.Title>
       
       <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-12">
@@ -173,7 +173,7 @@ const Signup = () => {
   const renderStudentForm = () => (
     <div>
       <Dialog.Title as="h3" className="text-xl sm:text-2xl font-bold leading-6 text-blue mb-4 sm:mb-6 text-center px-2">
-        Student Signup
+        Student SignUp
       </Dialog.Title>
       
       <form onSubmit={handleFormSubmit} action="https://formspree.io/f/xgvlwbze" method="POST" className="space-y-3 sm:space-y-4">
@@ -388,7 +388,7 @@ const Signup = () => {
   const renderUniversityForm = () => (
     <div>
       <Dialog.Title as="h3" className="text-2xl font-bold leading-6 text-blue mb-6 text-center">
-        University / Institute Signup
+        University / Institute SignUp
       </Dialog.Title>
       
       <form onSubmit={handleFormSubmit} action="https://formspree.io/f/xgvlwbze" method="POST" className="space-y-4">
@@ -556,7 +556,7 @@ const Signup = () => {
   const renderCorporateForm = () => (
     <div>
       <Dialog.Title as="h3" className="text-2xl font-bold leading-6 text-blue mb-6 text-center">
-        Corporate Signup
+        Corporate SignUp
       </Dialog.Title>
       
       <form onSubmit={handleFormSubmit} action="https://formspree.io/f/xgvlwbze" method="POST" className="space-y-4">
@@ -776,7 +776,7 @@ const Signup = () => {
           onClick={openModal}
           style={{ zIndex: 1000, position: 'relative' }}
         >
-          Signup
+          SignUp
         </button>
       </div>
 

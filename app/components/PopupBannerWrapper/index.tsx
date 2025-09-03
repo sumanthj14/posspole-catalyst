@@ -24,7 +24,7 @@ export default function PopupBannerWrapper({
     setTimeout(() => {
       const buttons = document.querySelectorAll('button');
       Array.from(buttons).forEach((button) => {
-        if (button.textContent?.includes('Signup')) {
+        if (button.textContent?.includes('SignUp')) {
           button.click();
           return;
         }

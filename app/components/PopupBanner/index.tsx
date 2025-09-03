@@ -115,7 +115,7 @@ const PopupBanner: React.FC<PopupBannerProps> = ({
                       }}
                       className="bg-navyblue hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm min-w-[120px]"
                     >
-                      Register Now
+                      SignUp
                     </button>
                     <button
                       onClick={closeModal}
