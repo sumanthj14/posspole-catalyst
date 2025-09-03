@@ -69,16 +69,14 @@ const ScrollAnimation = ({
     hidden: {
       ...getInitialPosition(),
       transition: {
-        duration: 0.3,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        duration: 0.3
       }
     },
     visible: {
       ...getFinalPosition(),
       transition: {
         duration,
-        delay,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        delay
       }
     }
   };
