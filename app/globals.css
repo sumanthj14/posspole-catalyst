@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scroll restoration and behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure page starts at top on load/refresh */
+body {
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Hide all scrollbars */
+body {
+  overflow-x: hidden;
+}
+
+/* Hide scrollbars for webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbars for Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbars for IE and Edge */
+body {
+  -ms-overflow-style: none;
+}
+
+/* Improved responsive typography */
+@layer base {
+  html {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 640px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    html {
+      font-size: 18px;
+    }
+  }
+}
+
+/* Enhanced button hover effects */
+@layer components {
+  .btn-enhanced {
+    @apply transition-all duration-300 ease-in-out transform;
+  }
+  
+  .btn-enhanced:hover {
+    @apply scale-105 shadow-xl;
+  }
+  
+  .btn-enhanced:active {
+    @apply scale-95;
+  }
+}
+
+/* Improved focus states for accessibility */
+@layer utilities {
+  .focus-enhanced:focus {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+}
+
+/* Responsive container improvements */
+@layer utilities {
+  .container-responsive {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 1280px;
+  }
+}
+
+/* Animation performance optimization */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Tighter spacing between sections and components */
+@layer utilities {
+  .section-spacing {
+    @apply py-4 sm:py-6 md:py-8;
+  }
+  
+  .component-spacing {
+    @apply my-4 sm:my-6 md:my-8;
+  }
+  
+  .content-spacing {
+    @apply mb-4 sm:mb-6 md:mb-8;
+  }
+  
+  .tight-spacing {
+    @apply space-y-3 sm:space-y-4 md:space-y-5;
+  }
+}
+
+/* Scroll animations */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-out {
+    animation: fadeOut 0.4s ease-out forwards;
+  }
+}
+
+/* Prevent animation blinking */
+[data-framer-motion="true"] {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+[data-framer-motion="true"][data-framer-appear-id] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0.3;
+    transform: translateY(-15px);
+  }
+}

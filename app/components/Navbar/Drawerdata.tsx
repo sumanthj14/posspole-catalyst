@@ -12,7 +12,6 @@ const navigation: NavigationItem[] = [
     { name: 'About Us', href: '#about-section', current: true },
     { name: 'Identify & Train', href: '#identify-train-section', current: false },
     { name: 'Program', href: '#program-section', current: false },
-    { name: 'Contact', href: '#contact-section', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -32,14 +31,44 @@ const Data = () => {
                                 key={item.name}
                                 href={item.href}
                                 className={classNames(
-                                    item.current ? 'bg-blue-50 text-blue-600 border-l-4 border-blue-600' : 'text-gray-700 hover:bg-gray-50 hover:text-blue-600',
+                                    item.current ? 'bg-navyblue text-white border-l-4 border-navyblue' : 'text-slate-700 hover:bg-navyblue hover:text-white',
                                     'block px-4 py-3 rounded-md text-base font-medium transition-colors duration-200 min-h-[48px] flex items-center',
                                     loadingLink === item.href ? 'link-loading' : ''
                                 )}
                                 aria-current={item.current ? 'page' : undefined}
-                                onClick={() => {
+                                onClick={(e) => {
+                                    e.preventDefault();
                                     setLoadingLink(item.href);
-                                    setTimeout(() => setLoadingLink(null), 800);
+                                    
+                                    // Smooth scroll to target section
+                                    const targetId = item.href.replace('#', '');
+                                    const targetElement = document.getElementById(targetId);
+                                    
+                                    if (targetElement) {
+                                        // Add a slight delay for visual feedback
+                                        setTimeout(() => {
+                                            targetElement.scrollIntoView({
+                                                behavior: 'smooth',
+                                                block: 'start'
+                                            });
+                                            
+                                            // Re-trigger animations by temporarily removing and re-adding elements to viewport
+                                            const animatedElements = targetElement.querySelectorAll('[data-framer-motion]');
+                                            animatedElements.forEach((el) => {
+                                                const motionEl = el as any;
+                                                if (motionEl.style) {
+                                                    motionEl.style.transform = 'translateY(50px)';
+                                                    motionEl.style.opacity = '0';
+                                                    setTimeout(() => {
+                                                        motionEl.style.transform = 'translateY(0px)';
+                                                        motionEl.style.opacity = '1';
+                                                    }, 100);
+                                                }
+                                            });
+                                        }, 200);
+                                    }
+                                    
+                                    setTimeout(() => setLoadingLink(null), 1000);
                                 }}
                             >
                                 {item.name}

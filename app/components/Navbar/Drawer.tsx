@@ -34,12 +34,12 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
                     <header className="px-4 py-4 flex items-center justify-between border-b border-gray-200">
 
                         <div className="flex flex-shrink-0 items-center">
-                            <h2 className="text-lg font-semibold text-gray-900">Menu</h2>
+                            <h2 className="text-lg font-bold text-slate-800">Menu</h2>
                         </div>
 
                         <button
                             type="button"
-                            className="inline-flex items-center justify-center p-3 sm:p-4 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors duration-200 min-h-[48px] min-w-[48px]"
+                            className="inline-flex items-center justify-center p-3 sm:p-4 rounded-md text-slate-700 hover:text-blue-700 hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors duration-200 min-h-[48px] min-w-[48px]"
                             onClick={() => setIsOpen(false)}
                             aria-label="Close navigation menu"
                         >

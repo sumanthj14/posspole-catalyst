@@ -18,7 +18,6 @@ const navigation: NavigationItem[] = [
     { name: 'About Us', href: '#about-section', current: false },
     { name: 'Identify & Train', href: '#identify-train-section', current: false },
     { name: 'Program', href: '#program-section', current: false },
-    { name: 'Contact', href: '#contact-section', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -59,7 +58,7 @@ const Navbar = () => {
                             {/* LOGO */}
 
                             <div className="flex flex-shrink-0 items-center border-right">
-                                <Link href="/" className='flex items-center' aria-label="POSSPOLE CATALYST - Go to homepage">
+                                <Link href="/" className='flex items-center font-extrabold' aria-label="POSSPOLE CATALYST - Go to homepage">
                                     <Image 
                                         src="/images/posspole-logo.svg" 
                                         alt="POSSPOLE CATALYST logo" 
@@ -73,22 +72,52 @@ const Navbar = () => {
                             {/* LINKS */}
 
                             <nav className="hidden lg:flex items-center border-right" role="navigation" aria-label="Primary navigation">
-                                <ul className={`flex justify-end transition-all duration-300 ease-out ${isMounted && isScrolled ? 'space-x-1 md:space-x-2' : 'space-x-2 md:space-x-3 lg:space-x-4'}`} role="list">
+                                <ul className={`flex justify-end items-center transition-all duration-300 ease-out ${isMounted && isScrolled ? 'space-x-1 md:space-x-2' : 'space-x-2 md:space-x-3 lg:space-x-4'}`} role="list">
                                     {navigation.map((item) => (
                                         <li key={item.name}>
                                             <Link
                                                 href={item.href}
                                                 className={classNames(
                                                     item.current
-                                                        ? 'text-blue-600 bg-blue-50'
-                                                        : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50',
-                                                    `navlinks transition-all duration-300 ease-out transform hover:scale-105 ${isMounted && isScrolled ? 'px-3 py-2 text-xs sm:text-sm md:text-base min-h-[36px]' : 'px-4 py-2 text-sm md:text-base lg:text-lg min-h-[40px]'} rounded-md font-medium hover:shadow-sm active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2`,
+                                                        ? 'text-white bg-navyblue'
+                        : 'text-slate-700 hover:text-white hover:bg-navyblue',
+                                                    `navlinks transition-all duration-300 ease-out transform hover:scale-105 ${isMounted && isScrolled ? 'px-3 py-2 text-xs sm:text-sm md:text-base min-h-[36px]' : 'px-4 py-2 text-sm md:text-base lg:text-lg min-h-[40px]'} rounded-md font-semibold hover:shadow-sm active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2`,
                                                     loadingLink === item.href ? 'link-loading' : ''
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}
-                                                onClick={() => {
+                                                onClick={(e) => {
+                                                    e.preventDefault();
                                                     setLoadingLink(item.href);
-                                                    setTimeout(() => setLoadingLink(null), 800);
+                                                    
+                                                    // Smooth scroll to target section
+                                                    const targetId = item.href.replace('#', '');
+                                                    const targetElement = document.getElementById(targetId);
+                                                    
+                                                    if (targetElement) {
+                                                        // Add a slight delay for visual feedback
+                                                        setTimeout(() => {
+                                                            targetElement.scrollIntoView({
+                                                                behavior: 'smooth',
+                                                                block: 'start'
+                                                            });
+                                                            
+                                                            // Re-trigger animations by temporarily removing and re-adding elements to viewport
+                                                            const animatedElements = targetElement.querySelectorAll('[data-framer-motion]');
+                                                            animatedElements.forEach((el) => {
+                                                                const motionEl = el as any;
+                                                                if (motionEl.style) {
+                                                                    motionEl.style.transform = 'translateY(50px)';
+                                                                    motionEl.style.opacity = '0';
+                                                                    setTimeout(() => {
+                                                                        motionEl.style.transform = 'translateY(0px)';
+                                                                        motionEl.style.opacity = '1';
+                                                                    }, 100);
+                                                                }
+                                                            });
+                                                        }, 200);
+                                                    }
+                                                    
+                                                    setTimeout(() => setLoadingLink(null), 1000);
                                                 }}
                                             >
                                                 {item.name}
@@ -98,14 +127,12 @@ const Navbar = () => {
                                             </Link>
                                         </li>
                                     ))}
+                                    <li>
+                                        <Signup />
+                                    </li>
                                 </ul>
 
                             </nav>
-                            
-                            {/* SIGNUP BUTTON */}
-                            <div className="flex items-center">
-                                <Signup />
-                            </div>
                         </div>
 
 
@@ -116,7 +143,7 @@ const Navbar = () => {
                         <div className='block lg:hidden'>
                             <button
                                 type="button"
-                                className="inline-flex items-center justify-center p-3 sm:p-4 rounded-md text-gray-700 hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors duration-200 min-h-[48px] min-w-[48px]"
+                                className="inline-flex items-center justify-center p-3 sm:p-4 rounded-md text-slate-700 hover:text-blue-700 hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors duration-200 min-h-[48px] min-w-[48px]"
                                 onClick={() => setIsOpen(true)}
                                 aria-expanded={isOpen}
                                 aria-label="Open navigation menu"

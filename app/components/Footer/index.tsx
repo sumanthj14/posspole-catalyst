@@ -49,7 +49,7 @@ const Footer = () => {
                                 <div className='text-offwhite text-lg'>
                                     <Link 
                                         href="mailto:letmein@posspole.com" 
-                                        className={`hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black rounded flex items-center ${
+                                        className={`font-medium hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black rounded flex items-center ${
                                             loadingLink === 'mailto:letmein@posspole.com' ? 'link-loading' : ''
                                         }`}
                                         aria-label="Send us an email"
@@ -78,7 +78,7 @@ const Footer = () => {
                                     </div>
                                     <div>
                                         <h3 className='text-white text-lg sm:text-xl font-semibold mb-1 sm:mb-2'>Visit Us</h3>
-                                        <p className='text-offwhite text-sm sm:text-base md:text-lg leading-relaxed'>
+                                        <p className='text-offwhite text-sm sm:text-base md:text-lg leading-loose'>
                                             Krishi Bhavana, Hudson Circle,<br />
                                             Bangalore - 560 002
                                         </p>
@@ -96,18 +96,18 @@ const Footer = () => {
                                     <div>
                                         <h3 className='text-white text-lg sm:text-xl font-semibold mb-1 sm:mb-2'>Email address</h3>
                                         <Link 
-                                            href="mailto:letmein@posspole.com" 
-                                            className={`text-offwhite text-sm sm:text-base md:text-lg hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black rounded flex items-center ${
-                                                loadingLink === 'mailto:letmein@posspole.com' ? 'link-loading' : ''
-                                            }`}
-                                            aria-label="Send email to letmein@posspole.com"
-                                            onClick={() => handleLinkClick('mailto:letmein@posspole.com')}
-                                        >
-                                            letmein@posspole.com
-                                            {loadingLink === 'mailto:letmein@posspole.com' && (
-                                                <span className="ml-2 inline-block w-3 h-3 border border-current border-t-transparent rounded-full animate-spin" aria-hidden="true"></span>
-                                            )}
-                                        </Link>
+                            href="mailto:letmein@posspole.com" 
+                            className={`text-offwhite text-sm sm:text-base md:text-lg font-medium hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black rounded flex items-center ${
+                                loadingLink === 'mailto:letmein@posspole.com' ? 'link-loading' : ''
+                            }`}
+                            aria-label="Send email to letmein@posspole.com"
+                            onClick={() => handleLinkClick('mailto:letmein@posspole.com')}
+                        >
+                            letmein@posspole.com
+                            {loadingLink === 'mailto:letmein@posspole.com' && (
+                                <span className="ml-2 inline-block w-3 h-3 border border-current border-t-transparent rounded-full animate-spin" aria-hidden="true"></span>
+                            )}
+                        </Link>
                                     </div>
                                 </div>
 
@@ -121,18 +121,18 @@ const Footer = () => {
                                     <div>
                                         <h3 className='text-white text-lg sm:text-xl font-semibold mb-1 sm:mb-2'>Call now</h3>
                                         <Link 
-                                            href="tel:+918618145049" 
-                                            className={`text-offwhite text-sm sm:text-base md:text-lg hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black rounded flex items-center ${
-                                                loadingLink === 'tel:+918618145049' ? 'link-loading' : ''
-                                            }`}
-                                            aria-label="Call us at +91 86181 45049"
-                                            onClick={() => handleLinkClick('tel:+918618145049')}
-                                        >
-                                            (+91)86181-45049
-                                            {loadingLink === 'tel:+918618145049' && (
-                                                <span className="ml-2 inline-block w-3 h-3 border border-current border-t-transparent rounded-full animate-spin" aria-hidden="true"></span>
-                                            )}
-                                        </Link>
+                            href="tel:+918618145049" 
+                            className={`text-offwhite text-sm sm:text-base md:text-lg font-medium hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black rounded flex items-center ${
+                                loadingLink === 'tel:+918618145049' ? 'link-loading' : ''
+                            }`}
+                            aria-label="Call us at +91 86181 45049"
+                            onClick={() => handleLinkClick('tel:+918618145049')}
+                        >
+                            (+91)86181-45049
+                            {loadingLink === 'tel:+918618145049' && (
+                                <span className="ml-2 inline-block w-3 h-3 border border-current border-t-transparent rounded-full animate-spin" aria-hidden="true"></span>
+                            )}
+                        </Link>
                                     </div>
                                 </div>
                             </address>
@@ -145,7 +145,7 @@ const Footer = () => {
             <div className="mx-auto max-w-2xl lg:max-w-7xl">
                 <div className="pt-4 sm:pt-5 pb-4 sm:pb-5 px-4 sm:px-6 lg:px-4 border-solid border-t border-footer">
                     <div className="text-center">
-                        <p className='text-offwhite text-sm sm:text-base md:text-lg'>@2025 - All Rights Reserved by Posspole People</p>
+                        <p className='text-offwhite text-sm sm:text-base md:text-lg font-medium leading-relaxed'>@2025 - All Rights Reserved by Posspole People</p>
                     </div>
                 </div>
             </div>

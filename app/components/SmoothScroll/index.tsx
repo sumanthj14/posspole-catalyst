@@ -1,8 +1,12 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, ReactNode } from 'react';
 
-export default function SmoothScroll() {
+interface SmoothScrollProps {
+  children: ReactNode;
+}
+
+export default function SmoothScroll({ children }: SmoothScrollProps) {
   useEffect(() => {
     // Enhanced smooth scrolling for anchor links
     const handleAnchorClick = (e: Event) => {
@@ -38,23 +42,36 @@ export default function SmoothScroll() {
     // Throttled scroll event for better performance
     window.addEventListener('scroll', updateScrollPosition, { passive: true });
 
-    // Intersection Observer for scroll animations
+    // Intersection Observer for scroll animations (only for non-framer-motion elements)
     const observerOptions = {
-      threshold: 0.1,
+      threshold: 0.2,
       rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        // Skip elements that already have framer-motion animations
+        if (entry.target.querySelector('[data-framer-motion="true"]')) {
+          return;
+        }
+        
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-fade-in');
+          entry.target.classList.remove('animate-fade-out');
+        } else {
+          entry.target.classList.remove('animate-fade-in');
+          entry.target.classList.add('animate-fade-out');
         }
       });
     }, observerOptions);
 
-    // Observe all sections for scroll animations
-    const sections = document.querySelectorAll('section');
-    sections.forEach((section) => observer.observe(section));
+    // Observe all sections for scroll animations (excluding those with framer-motion)
+    const sections = document.querySelectorAll('section:not([data-framer-motion])');
+    sections.forEach((section) => {
+      if (!section.querySelector('[data-framer-motion="true"]')) {
+        observer.observe(section);
+      }
+    });
 
     // Cleanup
     return () => {
@@ -64,5 +81,5 @@ export default function SmoothScroll() {
     };
   }, []);
 
-  return null;
+  return <>{children}</>;
 }

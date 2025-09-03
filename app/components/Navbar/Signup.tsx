@@ -116,7 +116,7 @@ const Signup = () => {
 
   const renderUserTypeSelection = () => (
     <div className="text-center">
-      <Dialog.Title as="h3" className="text-xl sm:text-2xl font-bold leading-6 text-gray-900 mb-6 sm:mb-8 px-2">
+      <Dialog.Title as="h3" className="text-xl sm:text-2xl font-bold leading-6 text-blue mb-6 sm:mb-8 px-2">
         Signup As
       </Dialog.Title>
       
@@ -130,7 +130,7 @@ const Signup = () => {
             onChange={() => handleUserTypeSelect('student')}
             className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 border-gray-300 focus:ring-blue-500"
           />
-          <span className="ml-3 text-base sm:text-lg font-medium text-gray-900">Student</span>
+          <span className="ml-3 text-base sm:text-lg font-medium text-blue">Student</span>
         </label>
         
         <label className="flex items-center p-3 sm:p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors min-h-[3rem] sm:min-h-[3.5rem]">
@@ -142,7 +142,7 @@ const Signup = () => {
             onChange={() => handleUserTypeSelect('university')}
             className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 border-gray-300 focus:ring-blue-500"
           />
-          <span className="ml-3 text-base sm:text-lg font-medium text-gray-900">University / Institute</span>
+          <span className="ml-3 text-base sm:text-lg font-medium text-blue">University / Institute</span>
         </label>
         
         <label className="flex items-center p-3 sm:p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors min-h-[3rem] sm:min-h-[3.5rem]">
@@ -154,7 +154,7 @@ const Signup = () => {
             onChange={() => handleUserTypeSelect('corporate')}
             className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 border-gray-300 focus:ring-blue-500"
           />
-          <span className="ml-3 text-base sm:text-lg font-medium text-gray-900">Corporates</span>
+          <span className="ml-3 text-base sm:text-lg font-medium text-blue">Corporates</span>
         </label>
       </div>
       
@@ -172,7 +172,7 @@ const Signup = () => {
 
   const renderStudentForm = () => (
     <div>
-      <Dialog.Title as="h3" className="text-xl sm:text-2xl font-bold leading-6 text-gray-900 mb-4 sm:mb-6 text-center px-2">
+      <Dialog.Title as="h3" className="text-xl sm:text-2xl font-bold leading-6 text-blue mb-4 sm:mb-6 text-center px-2">
         Student Signup
       </Dialog.Title>
       
@@ -277,7 +277,7 @@ const Signup = () => {
         </div>
         
         <div className="border-t pt-4">
-          <h4 className="text-lg font-semibold text-gray-900 mb-3">Academic Information</h4>
+          <h4 className="text-lg font-semibold text-blue mb-3">Academic Information</h4>
           
           <div className="space-y-4">
             <div>
@@ -387,14 +387,14 @@ const Signup = () => {
 
   const renderUniversityForm = () => (
     <div>
-      <Dialog.Title as="h3" className="text-2xl font-bold leading-6 text-gray-900 mb-6 text-center">
+      <Dialog.Title as="h3" className="text-2xl font-bold leading-6 text-blue mb-6 text-center">
         University / Institute Signup
       </Dialog.Title>
       
       <form onSubmit={handleFormSubmit} action="https://formspree.io/f/xgvlwbze" method="POST" className="space-y-4">
         <input type="hidden" name="userType" value="University" />
         <div className="border-b pb-4">
-          <h4 className="text-lg font-semibold text-gray-900 mb-3">Organization Information</h4>
+          <h4 className="text-lg font-semibold text-blue mb-3">Organization Information</h4>
           
           <div className="space-y-4">
             <div>
@@ -432,7 +432,7 @@ const Signup = () => {
         </div>
         
         <div className="border-b pb-4">
-          <h4 className="text-lg font-semibold text-gray-900 mb-3">Primary Contact Details</h4>
+          <h4 className="text-lg font-semibold text-blue mb-3">Primary Contact Details</h4>
           
           <div className="space-y-4">
             <div>
@@ -555,14 +555,14 @@ const Signup = () => {
 
   const renderCorporateForm = () => (
     <div>
-      <Dialog.Title as="h3" className="text-2xl font-bold leading-6 text-gray-900 mb-6 text-center">
+      <Dialog.Title as="h3" className="text-2xl font-bold leading-6 text-blue mb-6 text-center">
         Corporate Signup
       </Dialog.Title>
       
       <form onSubmit={handleFormSubmit} action="https://formspree.io/f/xgvlwbze" method="POST" className="space-y-4">
         <input type="hidden" name="userType" value="Corporate" />
         <div className="border-b pb-4">
-          <h4 className="text-lg font-semibold text-gray-900 mb-3">Organization Information</h4>
+          <h4 className="text-lg font-semibold text-blue mb-3">Organization Information</h4>
           
           <div className="space-y-4">
             <div>
@@ -645,7 +645,7 @@ const Signup = () => {
         </div>
         
         <div className="border-b pb-4">
-          <h4 className="text-lg font-semibold text-gray-900 mb-3">Primary Contact Details</h4>
+          <h4 className="text-lg font-semibold text-blue mb-3">Primary Contact Details</h4>
           
           <div className="space-y-4">
             <div>
