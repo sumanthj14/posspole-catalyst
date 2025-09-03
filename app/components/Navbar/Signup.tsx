@@ -772,7 +772,7 @@ const Signup = () => {
       <div className="flex items-center">
         <button 
           type="button" 
-          className='justify-end text-lg sm:text-xl font-semibold bg-transparent py-3 sm:py-4 px-4 sm:px-6 lg:px-12 navbutton rounded-full hover:bg-navyblue hover:text-white text-gray-700 cursor-pointer min-h-[44px] sm:min-h-[48px] min-w-[80px] sm:min-w-[100px]'
+          className='justify-end text-lg sm:text-xl font-semibold bg-navyblue py-3 sm:py-4 px-4 sm:px-6 lg:px-12 navbutton rounded-full text-white cursor-pointer min-h-[44px] sm:min-h-[48px] min-w-[80px] sm:min-w-[100px]'
           onClick={openModal}
           style={{ zIndex: 1000, position: 'relative' }}
         >

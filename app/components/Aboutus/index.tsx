@@ -10,7 +10,7 @@ const Aboutus = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-12 my-4 sm:my-6 md:my-8'>
                     <div className='col-span-12 lg:col-span-6 flex justify-center mb-8 lg:mb-0'>
                         <div className="flex flex-col align-middle justify-center p-4 sm:p-6 md:p-8 lg:p-10">
-                            <h2 id="about-heading" className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl pt-2 sm:pt-4 font-bold leading-tight text-center lg:text-start text-slate-800'>About Us</h2>
+                            <h2 id="about-heading" className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl pt-2 sm:pt-4 font-bold leading-tight text-center lg:text-start text-blue'>About Us</h2>
                             <h4 className='text-lg sm:text-xl md:text-2xl pt-3 sm:pt-4 font-semibold leading-relaxed text-center lg:text-start text-slate-700'>
                                 Posspole Catalyst is for unlocking human potential and building thriving local and global ecosystems through innovation, creativity, and collaboration.
                             </h4>

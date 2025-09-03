@@ -18,7 +18,7 @@ const CoFounders = () => {
     },
     {
       name: "Kiran Rudrappa",
-      role: "CEO, Posspole",
+      role: "Director of Posspole People",
       image: "/images/team/kiran-rudrappa.png",
       quote: "Catalyst stands apart through its deep integration with Posspole's full-stack ecosystem — from product development and compliance to manufacturing, global market access, and funding via our Corporate Venture Capital arm. Participants will tackle large-scale innovation across healthcare, defence, telecom, and energy, gaining real-world industrial problem-solving experience. Catalyst is not just a platform; it's a national engine to shape global product creators from India, unlocking a new era of talent and product-led growth."
     }
@@ -30,8 +30,8 @@ const CoFounders = () => {
         {/* Section Heading */}
         <ScrollAnimation direction="up" delay={0.2} duration={0.8}>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Visionary Leaders Driving the <span className="text-blue-600">OneEdu × PossPole Catalyst</span> Collaboration
+            <h2 className="text-3xl md:text-4xl font-bold text-blue mb-4">
+              Visionary leaders Driving the <span className="text-blue-600">Posspole Catalyst</span>
             </h2>
           </div>
         </ScrollAnimation>

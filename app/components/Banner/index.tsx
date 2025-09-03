@@ -33,28 +33,30 @@ const Banner = () => {
                                 1,000,000+ AI-ready developers by 2040
                             </p>
                         </ScrollAnimation>
+                        
+                        {/* "no-prerequisite, no experience" selection model Section */}
+                        <ScrollAnimation direction="up" delay={0.5} duration={0.8}>
+                            <div className='mt-6 sm:mt-8 bg-blue-600 bg-opacity-95 rounded-xl p-4 sm:p-6 md:p-8 max-w-3xl mx-auto transform hover:scale-105 transition-all duration-300 shadow-2xl border-2 border-blue-300'>
+                                <p className='text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white px-2 leading-relaxed text-center' role="text" aria-label="Selection model">
+                                    &quot;no-prerequisite, no experience&quot; selection model
+                                </p>
+                            </div>
+                        </ScrollAnimation>
                          
                          {/* NO Teachers. Classrooms. Section */}
                         <ScrollAnimation direction="up" delay={0.6} duration={0.8}>
-                          <div className='mt-8 sm:mt-12 bg-blue-500 bg-opacity-90 rounded-lg p-6 sm:p-8 md:p-10 max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-300'>
-                              <h2 className='text-6xl sm:text-7xl md:text-8xl font-extrabold text-blue mb-2'>
+                          <div className='mt-8 sm:mt-12 bg-blue-600 bg-opacity-95 rounded-2xl p-6 sm:p-8 md:p-12 max-w-2xl mx-auto transform hover:scale-105 transition-all duration-300 shadow-2xl border-4 border-white'>
+                              <h2 className='text-7xl sm:text-8xl md:text-9xl font-extrabold text-white mb-4 text-center drop-shadow-lg'>
                                   NO
                               </h2>
-                              <p className='text-xl sm:text-2xl md:text-3xl font-semibold text-blue leading-tight'>
+                              <p className='text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight text-center drop-shadow-md'>
                                   Teachers.<br />
                                   Classrooms.
                               </p>
                           </div>
                         </ScrollAnimation>
                           
-                          {/* SOLVE. BUILD. BREAK THINGS. REPEAT Section */}
-                        <ScrollAnimation direction="up" delay={0.8} duration={0.8}>
-                          <div className='mt-8 sm:mt-12'>
-                              <p className='text-lg sm:text-xl md:text-2xl font-bold text-blue tracking-wider uppercase animate-pulse'>
-                                  SOLVE. BUILD. BREAK THINGS. REPEAT
-                              </p>
-                          </div>
-                        </ScrollAnimation>
+
 
                         {/* <p className='text-xl md:text-2xl font-light mb-8 max-w-5xl mx-auto leading-relaxed'>
                             A proven, peer-to-peer and transformative tech platform to develop AI-ready tech skills, at scale
