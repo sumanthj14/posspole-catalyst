@@ -23,12 +23,12 @@ export default function PopupBannerWrapper({
     // Wait a bit for scroll to complete, then find and click signup button
     setTimeout(() => {
       const buttons = document.querySelectorAll('button');
-      for (const button of buttons) {
+      Array.from(buttons).forEach((button) => {
         if (button.textContent?.includes('Signup')) {
           button.click();
-          break;
+          return;
         }
-      }
+      });
     }, 500);
   };
 

@@ -28,7 +28,7 @@ const CoFounders = () => {
     <section className="bg-gray-50 py-8 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Section Heading */}
-        <ScrollAnimation animation="slide-up" delay={0.2} duration={0.8}>
+        <ScrollAnimation direction="up" delay={0.2} duration={0.8}>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
               Visionary Leaders Driving the <span className="text-blue-600">OneEdu × PossPole Catalyst</span> Collaboration
@@ -40,7 +40,7 @@ const CoFounders = () => {
           {coFounders.map((founder, index) => (
             <ScrollAnimation 
               key={index}
-              animation="slide-up" 
+              direction="up" 
               delay={0.4 + (index * 0.2)} 
               duration={0.8}
             >

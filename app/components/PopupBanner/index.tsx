@@ -103,7 +103,7 @@ const PopupBanner: React.FC<PopupBannerProps> = ({
                     Ready to Build the Future?
                   </h2>
                   <p className="text-xs text-gray-700 mb-3 max-w-lg mx-auto leading-relaxed">
-                    Step into Posspole Catalyst — where innovation meets industry. Join our elite program integrated with Posspole's full‑stack ecosystem, spanning product development, compliance, manufacturing, market access, and funding. Work on real‑world challenges in healthcare, defence, telecom, and energy, and become a global product creator from India. Spots are limited — secure yours today!
+                    Step into Posspole Catalyst — where innovation meets industry. Join our elite program integrated with Posspole{'s'} full‑stack ecosystem, spanning product development, compliance, manufacturing, market access, and funding. Work on real‑world challenges in healthcare, defence, telecom, and energy, and become a global product creator from India. Spots are limited — secure yours today!
                   </p>
                   <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center">
                     <button

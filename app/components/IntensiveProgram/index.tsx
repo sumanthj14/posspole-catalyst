@@ -31,7 +31,7 @@ const IntensiveProgram = () => {
                         </li>
                         <li className='flex items-center'>
                             <span className='text-green-600 font-bold mr-4' aria-hidden="true">✓</span>
-                        <span className='text-green-600 font-bold'>Producing "AI-ready" world-class full-stack developers</span>
+                        <span className='text-green-600 font-bold'>Producing {"AI-ready"} world-class full-stack developers</span>
                         </li>
                     </ul>
                 </section>
