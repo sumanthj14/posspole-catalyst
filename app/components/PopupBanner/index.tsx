@@ -75,7 +75,7 @@ const PopupBanner: React.FC<PopupBannerProps> = ({
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="relative transform overflow-hidden rounded-2xl bg-white shadow-xl transition-all max-w-4xl w-full mx-4">
+              <Dialog.Panel className="relative transform overflow-hidden rounded-2xl bg-white shadow-xl transition-all max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl w-full mx-4">
                 {/* Close button */}
                 <button
                   onClick={closeModal}
@@ -90,15 +90,15 @@ const PopupBanner: React.FC<PopupBannerProps> = ({
                   <Image
                     src={imageSrc}
                     alt={imageAlt}
-                    width={1000}
-                    height={400}
-                    className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-contain bg-gray-100 rounded-t-2xl"
+                    width={600}
+                    height={300}
+                    className="w-full h-40 sm:h-48 md:h-56 lg:h-64 object-contain bg-gray-100 rounded-t-2xl"
                     priority
                   />
                 </div>
                 
                 {/* Call to Action Section */}
-                <div className="p-3 sm:p-4 text-center bg-gradient-to-r from-blue-50 to-indigo-50">
+                <div className="p-2 sm:p-3 md:p-4 text-center bg-gradient-to-r from-blue-50 to-indigo-50">
                   <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
                     Ready to Build the Future?
                   </h2>
