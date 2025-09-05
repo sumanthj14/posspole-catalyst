@@ -11,14 +11,18 @@ const Aboutus = () => {
                     <div className='col-span-12 lg:col-span-6 flex justify-center mb-8 lg:mb-0'>
                         <div className="flex flex-col align-middle justify-center p-4 sm:p-6 md:p-8 lg:p-10">
                             <h2 id="about-heading" className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl pt-2 sm:pt-4 font-bold leading-tight text-center lg:text-start text-blue'>About Us</h2>
-                            <h4 className='text-lg sm:text-xl md:text-2xl pt-3 sm:pt-4 font-semibold leading-relaxed text-center lg:text-start text-slate-700'>
-                                Posspole Catalyst is for unlocking human potential and building thriving local and global ecosystems through innovation, creativity, and collaboration.
-                            </h4>
+
                             <p className='text-base sm:text-lg pt-3 sm:pt-4 font-normal leading-relaxed text-center lg:text-start text-slate-600'>
-                                We believe talent exists everywhere — in every background, every community, and every unconventional path. Our work is rooted in identifying hidden potential, nurturing it through transformative learning and real-world projects, and connecting it to opportunities that create impact.
+                                India&apos;s first peer-driven, AI-native product innovation platform. Built with Europe&apos;s 01Edu, and launched by Posspole People Pvt, Catalyst moves beyond rote learning—no teachers, no textbooks. Instead, learners tackle real-world challenges, master skills through projects, and grow as innovators from Day 1.
                             </p>
                             <p className='text-base sm:text-lg pt-3 sm:pt-4 font-normal leading-relaxed text-center lg:text-start text-slate-600'>
-                                By combining human-centered design, collective intelligence, and forward-thinking pedagogy, we empower individuals to thrive in the rapidly evolving world of technology, creativity, and problem-solving. Posspole Catalyst brings together diverse minds, future-focused skills, and community-driven action to create change that lasts.
+                                Connected to Posspole&apos;s full-stack innovation ecosystem—design, compliance, manufacturing, and global go-to-market—Catalyst turns learning into impact. From healthcare to defence, telecom to energy, learners solve live problems while corporates access ready-to-deploy talent.
+                            </p>
+                            <p className='text-base sm:text-lg pt-3 sm:pt-4 font-normal leading-relaxed text-center lg:text-start text-slate-600'>
+                                Catalyst isn&apos;t a school. It&apos;s a launchpad—unlocking hidden potential, building global creators, and shaping India&apos;s AI-driven future.
+                            </p>
+                            <p className='text-base sm:text-lg pt-3 sm:pt-4 font-bold text-center lg:text-start text-blue'>
+                                Learn. Build. Launch—backed by Posspole&apos;s Corporate VC
                             </p>
                         </div>
                     </div>
@@ -40,7 +44,7 @@ const Aboutus = () => {
                 <article className='bg-white p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg' role="region" aria-labelledby="vision-heading">
                     <h3 id="vision-heading" className='text-3xl sm:text-4xl font-bold text-blue mb-4 sm:mb-6'>Vision</h3>
                     <p className='text-lg sm:text-xl text-slate-600 font-normal leading-loose'>
-                        To create a world where everyone, regardless of background or circumstance, can access the tools, skills, and networks to become a driving force for innovation, social impact, and positive change.
+                        <span className='font-bold text-blue-600'>Nation-Building Through Innovation:</span> To empower 1,500 global product creators every two years from India. Innovators who design AI-native solutions across defense, healthcare, aerospace, telecom, energy, and beyond, while ensuring that anyone, regardless of background, has access to the tools, skills, and networks needed to drive innovation, social impact, and positive change.
                     </p>
                 </article>
                 
@@ -95,9 +99,11 @@ const Aboutus = () => {
                 {/* AI Image */}
                 <ScrollAnimation direction="up" delay={0.4} duration={1.0}>
                     <div className='flex justify-center items-center mb-4 sm:mb-6 md:mb-8 group'>
-                        <img 
+                        <Image 
                             src='/images/AI-image.png' 
                             alt='AI Technology Illustration' 
+                            width={1024}
+                            height={768}
                             className='max-w-4xl w-full h-auto object-cover transition-all duration-500 ease-in-out transform group-hover:scale-102 hover:shadow-lg mx-auto'
                         />
                     </div>

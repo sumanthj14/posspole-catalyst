@@ -9,9 +9,11 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-    { name: 'About Us', href: '#about-section', current: true },
-    { name: 'Identify & Train', href: '#identify-train-section', current: false },
-    { name: 'Program', href: '#program-section', current: false },
+    { name: 'About Us', href: '#about', current: true },
+    { name: 'Identify & Train', href: '#identify', current: false },
+    { name: 'Program', href: '#program', current: false },
+    { name: 'The Model', href: '#hero', current: false },
+    { name: 'Co-Founders', href: '#cofounders', current: false },
 ]
 
 function classNames(...classes: string[]) {

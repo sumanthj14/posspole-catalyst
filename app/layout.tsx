@@ -1,7 +1,6 @@
 import './globals.css'
 import Navbar from './components/Navbar/index'
 import Footer from './components/Footer/index'
-import ScrollEffect from './components/ScrollEffect/index'
 import SmoothScroll from './components/SmoothScroll/index'
 import PopupBannerWrapper from './components/PopupBannerWrapper'
 
@@ -44,7 +43,6 @@ export default function RootLayout({
           {children}
         </SmoothScroll>
         <Footer />
-        <ScrollEffect />
       </body>
     </html>
   )

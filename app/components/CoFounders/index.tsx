@@ -21,6 +21,12 @@ const CoFounders = () => {
       role: "Director of Posspole People",
       image: "/images/team/kiran-rudrappa.png",
       quote: "Catalyst stands apart through its deep integration with Posspole's full-stack ecosystem — from product development and compliance to manufacturing, global market access, and funding via our Corporate Venture Capital arm. Participants will tackle large-scale innovation across healthcare, defence, telecom, and energy, gaining real-world industrial problem-solving experience. Catalyst is not just a platform; it's a national engine to shape global product creators from India, unlocking a new era of talent and product-led growth."
+    },
+    {
+      name: "M R Shashidhara",
+      role: "Director of Posspole People",
+      image: "/images/team/shashidhara.png",
+      quote: "Posspole catalyst is creating FULL stack Product centric AI learners with the strong backup of posspole’s 360 degree hi-tech deep tech ecosystem. It shall lead to design, development and delivery of the most futuristic products and solutions for global challenges, coupled with its very unique speed, scale and time of creation and commercialization – a global bench mark."
     }
   ];
 
@@ -36,7 +42,7 @@ const CoFounders = () => {
           </div>
         </ScrollAnimation>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {coFounders.map((founder, index) => (
             <ScrollAnimation 
               key={index}
@@ -44,33 +50,33 @@ const CoFounders = () => {
               delay={0.4 + (index * 0.2)} 
               duration={0.8}
             >
-              <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-white rounded-xl shadow-lg p-4 text-center hover:shadow-xl transition-shadow duration-300">
                 {/* Profile Photo */}
-                <div className="mb-6">
-                  <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-gray-100">
+                <div className="mb-3">
+                  <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-2 border-gray-100">
                     <Image
                       src={founder.image}
                       alt={founder.name}
-                      width={160}
-                      height={160}
+                      width={80}
+                      height={80}
                       className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
 
                 {/* Quote */}
-                <div className="mb-6">
-                  <blockquote className="text-lg text-blue-700 font-medium leading-loose italic">
+                <div className="mb-3">
+                  <blockquote className="text-xs text-blue-700 font-medium leading-relaxed italic">
                     &ldquo;{founder.quote}&rdquo;
                   </blockquote>
                 </div>
 
                 {/* Name and Role */}
                 <div>
-                  <h3 className="text-xl font-extrabold text-slate-800 mb-1">
+                  <h3 className="text-sm font-extrabold text-slate-800 mb-1">
                     {founder.name}
                   </h3>
-                  <p className="text-sm text-blue-600 font-semibold">
+                  <p className="text-xs text-blue-600 font-semibold">
                     {founder.role}
                   </p>
                 </div>

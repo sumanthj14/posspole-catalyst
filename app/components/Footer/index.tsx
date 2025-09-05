@@ -141,6 +141,8 @@ const Footer = () => {
                 </div>
             </div>
 
+
+            
             {/* Copyright Only */}
             <div className="mx-auto max-w-2xl lg:max-w-7xl">
                 <div className="pt-4 sm:pt-5 pb-4 sm:pb-5 px-4 sm:px-6 lg:px-4 border-solid border-t border-footer">

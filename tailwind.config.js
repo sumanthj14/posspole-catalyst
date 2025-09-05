@@ -18,6 +18,9 @@ module.exports = {
     'justify-center',
   ],
   theme: {
+    fontFamily: {
+      sans: ['Poppins', 'sans-serif'],
+    },
     screens: {
       'sm': '640px',
       'md': '768px',

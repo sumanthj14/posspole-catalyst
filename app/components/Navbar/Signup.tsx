@@ -121,7 +121,7 @@ const Signup = () => {
       </Dialog.Title>
       
       <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-12">
-        <label className="flex items-center p-3 sm:p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors min-h-[3rem] sm:min-h-[3.5rem]">
+        <label className="flex items-center p-3 sm:p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-md min-h-[3rem] sm:min-h-[3.5rem]">
           <input
             type="radio"
             name="userType"
@@ -133,7 +133,7 @@ const Signup = () => {
           <span className="ml-3 text-base sm:text-lg font-medium text-blue">Student</span>
         </label>
         
-        <label className="flex items-center p-3 sm:p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors min-h-[3rem] sm:min-h-[3.5rem]">
+        <label className="flex items-center p-3 sm:p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-md min-h-[3rem] sm:min-h-[3.5rem]">
           <input
             type="radio"
             name="userType"
@@ -145,7 +145,7 @@ const Signup = () => {
           <span className="ml-3 text-base sm:text-lg font-medium text-blue">University / Institute</span>
         </label>
         
-        <label className="flex items-center p-3 sm:p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors min-h-[3rem] sm:min-h-[3.5rem]">
+        <label className="flex items-center p-3 sm:p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-md min-h-[3rem] sm:min-h-[3.5rem]">
           <input
             type="radio"
             name="userType"
