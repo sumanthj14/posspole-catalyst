@@ -182,3 +182,31 @@ body {
     transform: translateY(-15px);
   }
 }
+
+/* Custom spacing adjustments - removed conflicting overrides */
+
+/* Navbar specific responsive improvements */
+@layer components {
+  .navbar {
+    @apply w-full;
+  }
+  
+  .navbar .max-w-7xl {
+    @apply w-full;
+  }
+  
+  /* Ensure consistent navbar height across breakpoints */
+  .navbar-container {
+    @apply min-h-[64px] sm:min-h-[72px] lg:min-h-[80px];
+  }
+  
+  /* Improved logo scaling */
+  .navbar-logo {
+    @apply max-w-none;
+  }
+  
+  /* Better navigation link alignment */
+  .navlinks {
+    @apply whitespace-nowrap;
+  }
+}
