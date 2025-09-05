@@ -23,7 +23,7 @@ const Banner = () => {
                     <div className="py-6 sm:py-8">
                         <ScrollAnimation direction="up" delay={0.2} duration={0.8}>
                             <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight mb-4 sm:mb-6 px-2'>
-                                Building Global Product Creators from India!<br />
+                                Building Global Product Creators!<br />
                                 <span style={{color: '#3b82f6'}}>Nation-Building Through Innovation</span>
                             </h1>
                         </ScrollAnimation>
