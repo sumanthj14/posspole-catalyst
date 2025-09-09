@@ -8,7 +8,7 @@ import CoFounders from './components/CoFounders/index';
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden">
+    <main className="min-h-screen">
       <section id="home" className="scroll-mt-16">
         <Banner />
       </section>

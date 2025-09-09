@@ -1,12 +1,6 @@
 
 /** @type {import('next').NextConfig} */
-const buildConfig = require('./build.config.js');
-
-const env = process.env.NODE_ENV || 'development';
-const config = buildConfig[env] || buildConfig.development;
-
 const nextConfig = {
-  ...config,
   // Additional Next.js specific configurations
   reactStrictMode: true,
   swcMinify: true,
@@ -17,7 +11,6 @@ const nextConfig = {
   
   // Disable experimental features that might cause permission issues
   experimental: {
-    ...config.experimental,
     instrumentationHook: false,
   },
   

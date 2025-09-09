@@ -8,24 +8,20 @@
 /* Scroll restoration and behavior */
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
+  height: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
 }
 
 /* Ensure page starts at top on load/refresh */
 body {
-  overflow-x: hidden;
-}
-
-/* Smooth scrolling for the entire page */
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-/* Allow vertical scrollbar but hide horizontal scrollbar */
-body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  scrollbar-width: thin;
+  -ms-overflow-style: scrollbar;
 }
 
 /* Style scrollbars for webkit browsers (Chrome, Safari, Edge) */
@@ -45,17 +41,6 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
-
-/* Style scrollbars for Firefox */
-html {
-  scrollbar-width: thin;
-  scrollbar-color: #888 #f1f1f1;
-}
-
-/* Style scrollbars for IE and Edge */
-body {
-  -ms-overflow-style: scrollbar;
 }
 
 /* Improved responsive typography */

@@ -5,12 +5,12 @@ const HeroSection = () => {
     return (
         <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 sm:py-6 md:py-8 my-4 sm:my-6 md:my-8'>
             <div className='bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10'>
-                <div className='text-center space-y-4 sm:space-y-6 md:space-y-8'>
+                <div className='text-left space-y-4 sm:space-y-6 md:space-y-8'>
 
                     {/* Main Heading */}
                     <ScrollAnimation direction="up" delay={0.1} duration={0.8}>
                         <div className='space-y-3 sm:space-y-4'>
-                            <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-blue leading-tight px-2'>
+                            <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-blue leading-tight px-2 text-center'>
                                 The Model
                             </h1>
                         </div>
@@ -57,7 +57,7 @@ const HeroSection = () => {
                     <ScrollAnimation direction="up" delay={0.3} duration={0.8}>
                     <div className='mt-16 mb-12'>
                         <div className='bg-gradient-to-r from-lightblue via-white to-lightblue rounded-2xl p-6 sm:p-8 shadow-xl max-w-5xl mx-auto'>
-                            <h2 className='text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue mb-6 leading-tight'>
+                            <h2 className='text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue mb-6 leading-tight text-center'>
                                 A Next-Gen Learning and <br className='hidden sm:block'/>
                                 Innovation Hub: Posspole Catalyst <br className='hidden sm:block'/>
                                 Center
@@ -88,14 +88,14 @@ const HeroSection = () => {
                                     </div>
                                     <div className='flex items-start'>
                                         <div className='h-6 w-6 rounded-full bg-blue flex-shrink-0 mt-1'></div>
-                                        <p className='ml-4 text-black'>
+                                        <p className='ml-4 text-black text-left'>
                                             90% placement into Posspole ecosystem, tech firms, startups & ventures
                                         </p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div className='mt-8 text-center'>
+                            <div className='mt-8 text-left'>
                                 <p className='text-xl sm:text-2xl font-bold text-blue italic'>
                                     Where Talent Becomes Product Power
                                 </p>
@@ -108,12 +108,12 @@ const HeroSection = () => {
                     <ScrollAnimation direction="up" delay={0.4} duration={0.8}>
                     <div className='mt-16 mb-12'>
                         <div className='bg-gradient-to-br from-white via-lightblue to-white rounded-2xl p-6 sm:p-8 shadow-xl max-w-5xl mx-auto'>
-                            <h2 className='text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue mb-6 leading-tight'>
+                            <h2 className='text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue mb-6 leading-tight text-center'>
                                 The Two-Step Journey from <br className='hidden sm:block'/>
                                 Potential to Catalyst
                             </h2>
                             
-                            <div className='text-center mb-8'>
+                            <div className='text-left mb-8'>
                                 <p className='text-black text-lg'>
                                     At Posspole Catalyst, brilliance is discovered—not assumed. In partnership with 01Edu, 
                                     our selection process uncovers raw potential and shapes it into world-class talent. No 
@@ -130,25 +130,25 @@ const HeroSection = () => {
                                     <div className='space-y-3'>
                                         <div className='flex items-start'>
                                             <div className='h-5 w-5 rounded-full bg-blue flex-shrink-0 mt-1'></div>
-                                            <p className='ml-3 text-black'>
+                                            <p className='ml-4 text-black'>
                                                 Tests memory, logic, and learning agility
                                             </p>
                                         </div>
                                         <div className='flex items-start'>
                                             <div className='h-5 w-5 rounded-full bg-blue flex-shrink-0 mt-1'></div>
-                                            <p className='ml-3 text-black'>
+                                            <p className='ml-4 text-black'>
                                                 Merit-based filter – no bias of background, language, or education
                                             </p>
                                         </div>
                                         <div className='flex items-start'>
                                             <div className='h-5 w-5 rounded-full bg-blue flex-shrink-0 mt-1'></div>
-                                            <p className='ml-3 text-black'>
+                                            <p className='ml-4 text-black'>
                                                 Multiple attempts allowed, only the best score counts
                                             </p>
                                         </div>
                                         <div className='flex items-start'>
                                             <div className='h-5 w-5 rounded-full bg-blue flex-shrink-0 mt-1'></div>
-                                            <p className='ml-3 text-black'>
+                                            <p className='ml-4 text-black'>
                                                 Identifies the most adaptive and sharpest minds to move forward
                                             </p>
                                         </div>
@@ -163,37 +163,37 @@ const HeroSection = () => {
                                     <div className='space-y-3'>
                                         <div className='flex items-start'>
                                             <div className='h-5 w-5 rounded-full bg-blue flex-shrink-0 mt-1'></div>
-                                            <p className='ml-3 text-black'>
+                                            <p className='ml-4 text-black'>
                                                 No teachers, no lectures – only peer-led problem solving & collaboration
                                             </p>
                                         </div>
                                         <div className='flex items-start'>
                                             <div className='h-5 w-5 rounded-full bg-blue flex-shrink-0 mt-1'></div>
-                                            <p className='ml-3 text-black'>
+                                            <p className='ml-4 text-black'>
                                                 Includes weekly checkpoints and weekend group missions
                                             </p>
                                         </div>
                                         <div className='flex items-start'>
                                             <div className='h-5 w-5 rounded-full bg-blue flex-shrink-0 mt-1'></div>
-                                            <p className='ml-3 text-black'>
+                                            <p className='ml-4 text-black'>
                                                 Learners are pushed to innovate, adapt, and persist
                                             </p>
                                         </div>
                                         <div className='flex items-start'>
                                             <div className='h-5 w-5 rounded-full bg-blue flex-shrink-0 mt-1'></div>
-                                            <p className='ml-3 text-black'>
+                                            <p className='ml-4 text-black'>
                                                 Filters for the most resilient, curious, and collaborative minds
                                             </p>
                                         </div>
                                         <div className='flex items-start'>
                                             <div className='h-5 w-5 rounded-full bg-blue flex-shrink-0 mt-1'></div>
-                                            <p className='ml-3 text-black'>
+                                            <p className='ml-4 text-black'>
                                                 A transformation gateway, not just an entrance test
                                             </p>
                                         </div>
                                         <div className='flex items-start'>
                                             <div className='h-5 w-5 rounded-full bg-blue flex-shrink-0 mt-1'></div>
-                                            <p className='ml-3 text-black'>
+                                            <p className='ml-4 text-black'>
                                                 Graduates prove themselves as product thinkers, problem solvers & innovators
                                             </p>
                                         </div>
@@ -201,10 +201,10 @@ const HeroSection = () => {
                                 </div>
                             </div>
                             
-                            <div className='mt-8 text-center bg-blue bg-opacity-10 p-4 rounded-xl'>
+                            <div className='mt-8 text-left bg-blue bg-opacity-10 p-4 rounded-xl'>
                                 <p className='text-lg sm:text-xl text-blue font-medium italic'>
-                                    &ldquo;Catalysts create solutions that shape homes, hospitals, battlefields, cities, and lives— <br className='hidden md:block'/>
-                                    bringing safety, security, purpose, and possibility to millions.&rdquo;
+                                    "Catalysts create solutions that shape homes, hospitals, battlefields, cities, and lives— <br className='hidden md:block'/>
+                                    bringing safety, security, purpose, and possibility to millions."
                                 </p>
                             </div>
                         </div>
@@ -216,7 +216,7 @@ const HeroSection = () => {
                     <div className='mt-16 mb-12'>
                         <div className='bg-gradient-to-r from-purple-50 via-blue-50 to-purple-50 rounded-2xl p-6 sm:p-8 shadow-xl max-w-5xl mx-auto border border-blue border-opacity-20'>
                             <div className='text-center mb-6'>
-                                <h2 className='text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue mb-2 leading-tight inline-block relative'>
+                                <h2 className='text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue mb-2 leading-tight relative'>
                                     Who Can Apply
                                     <div className='absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue to-transparent'></div>
                                 </h2>
@@ -278,9 +278,9 @@ const HeroSection = () => {
                             
                             <div className='mt-8 text-center'>
                                 <p className='text-lg text-black'>In essence: anyone with the <span className='font-bold'>WILL</span> to create.</p>
-                                <div className='mt-4 bg-blue bg-opacity-10 p-4 rounded-xl inline-block'>
+                                <div className='mt-4 bg-blue bg-opacity-10 p-4 rounded-xl inline-block mx-auto'>
                                     <p className='text-xl sm:text-2xl font-bold text-blue italic'>
-                                        &ldquo;Talent Has No Boundaries&rdquo;<br />
+                                        "Talent Has No Boundaries"<br />
                                         <span className='text-lg font-normal'>If you have the will to create, you belong here.</span>
                                     </p>
                                 </div>
@@ -294,7 +294,7 @@ const HeroSection = () => {
                     <div className='mt-16 mb-12'>
                         <div className='bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-50 rounded-2xl p-6 sm:p-8 shadow-xl max-w-5xl mx-auto'>
                             <div className='text-center mb-8'>
-                                <h2 className='text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue mb-2 leading-tight inline-block relative'>
+                                <h2 className='text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue mb-2 leading-tight relative'>
                                     Why Corporations & Universities?
                                     <div className='absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue to-transparent'></div>
                                 </h2>
@@ -303,35 +303,35 @@ const HeroSection = () => {
                             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                                 {/* Quote 1 */}
                                 <div className='bg-white rounded-xl p-6 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg relative'>
-                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>&ldquo;</div>
-                                    <p className='text-lg text-black italic'>
-                                        From classrooms to catalysts—together, we shape India&apos;s innovation future.
-                                    </p>
-                                    <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>&rdquo;</div>
+                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>"</div>
+                                <p className='text-lg text-black leading-relaxed'>
+                                    From classrooms to catalysts—together, we shape India's innovation future.
+                                </p>
+                                <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>"</div>
                                 </div>
                                 
                                 {/* Quote 2 */}
                                 <div className='bg-white rounded-xl p-6 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg relative'>
-                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>&ldquo;</div>
+                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>"</div>
                                     <p className='text-lg text-black italic'>
                                         Your networks + our model = nation-building through innovation.
                                     </p>
-                                    <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>&rdquo;</div>
+                                    <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>"</div>
                                 </div>
                                 
                                 {/* Quote 3 */}
                                 <div className='bg-white rounded-xl p-6 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg relative'>
-                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>&ldquo;</div>
+                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>"</div>
                                     <p className='text-lg text-black italic'>
                                         Not just partners. Catalysts of change.
                                     </p>
-                                    <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>&rdquo;</div>
+                                    <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>"</div>
                                 </div>
                             </div>
                             
-                            <div className='mt-8 text-center'>
+                            <div className='mt-8 text-left'>
                                 <p className='text-xl font-bold text-blue'>
-                                    Together, we&apos;re building India&apos;s innovation future
+                                    Together, we're building India's innovation future
                                 </p>
                             </div>
                         </div>
@@ -342,7 +342,7 @@ const HeroSection = () => {
                     <ScrollAnimation direction="up" delay={0.7} duration={0.8}>
                     <div className='mt-16 mb-12'>
                         <div className='bg-gradient-to-r from-lightblue via-white to-lightblue rounded-2xl p-6 sm:p-8 shadow-xl max-w-5xl mx-auto'>
-                            <h2 className='text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue mb-6 leading-tight'>
+                            <h2 className='text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue mb-6 leading-tight text-center'>
                                 Program Highlights
                             </h2>
                             
@@ -393,21 +393,21 @@ const HeroSection = () => {
                             <div className='space-y-6'>
                                 <p className='text-black'>
                                     Posspole Catalyst invites leading corporates and universities to join as Strategic 
-                                    Investment Partners in a national mission to build India&apos;s most agile, globally 
+                                    Investment Partners in a national mission to build India's most agile, globally 
                                     competitive talent and product ecosystem.
                                 </p>
                                 
                                 <p className='text-black'>
-                                    This is more than infrastructure—it&apos;s a stake in reshaping India&apos;s product economy.
+                                    This is more than infrastructure—it's a stake in reshaping India's product economy.
                                 </p>
                                 
                                 <div className='bg-white p-6 rounded-xl shadow-md relative my-6'>
-                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>&ldquo;</div>
+                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>"</div>
                                     <p className='text-lg text-black italic'>
                                         Each product born at Catalyst will serve not just a market, but a mission—engineered for 
                                         safety, built for prosperity, and scaled to uplift communities.
                                     </p>
-                                    <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>&rdquo;</div>
+                                    <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>"</div>
                                 </div>
                                 
                                 <h3 className='text-xl sm:text-2xl font-bold text-blue mt-8 mb-4'>
