@@ -1,6 +1,13 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Static export configuration for Cloudflare Pages
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
+  
   // Additional Next.js specific configurations
   reactStrictMode: true,
   swcMinify: true,
