@@ -26,7 +26,7 @@ const CoFounders = () => {
       name: "M R Shashidhara",
       role: "Director of Posspole People",
       image: "/images/team/shashidhara.png",
-      quote: "Posspole catalyst is creating FULL stack Product centric AI learners with the strong backup of posspole’s 360 degree hi-tech deep tech ecosystem. It shall lead to design, development and delivery of the most futuristic products and solutions for global challenges, coupled with its very unique speed, scale and time of creation and commercialization – a global bench mark."
+      quote: "Posspole catalyst is creating FULL stack Product centric AI learners with the strong backup of posspole's 360 degree hi-tech deep tech ecosystem. It shall lead to design, development and delivery of the most futuristic products and solutions for global challenges, coupled with its very unique speed, scale and time of creation and commercialization – a global bench mark."
     }
   ];
 

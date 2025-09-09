@@ -23,7 +23,7 @@ const HeroSection = () => {
                         <div className='bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-blue-50'>
                             <h3 className='text-xl font-bold text-blue mb-3'>Flagship Center</h3>
                             <p className='text-black'>
-                                Bengaluru – 250 learners, 100% Posspole-owned
+                                Bengaluru {"\u2013"} 250 learners, 100% Posspole-owned
                             </p>
                         </div>
 
@@ -31,7 +31,7 @@ const HeroSection = () => {
                         <div className='bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-blue-50'>
                             <h3 className='text-xl font-bold text-blue mb-3'>Nationwide Expansion</h3>
                             <p className='text-black'>
-                                10+ Catalyst Centers Nationwide – in partnership with top universities & business leaders
+                                10+ Catalyst Centers Nationwide {"\u2013"} in partnership with top universities & business leaders
                             </p>
                         </div>
 
@@ -115,9 +115,9 @@ const HeroSection = () => {
                             
                             <div className='text-left mb-8'>
                                 <p className='text-black text-lg'>
-                                    At Posspole Catalyst, brilliance is discovered—not assumed. In partnership with 01Edu, 
+                                    At Posspole Catalyst, brilliance is discovered{"\u2014"}not assumed. In partnership with 01Edu, 
                                     our selection process uncovers raw potential and shapes it into world-class talent. No 
-                                    CVs, no coding background—just mindset, grit, and problem-solving spirit.
+                                    CVs, no coding background{"\u2014"}just mindset, grit, and problem-solving spirit.
                                 </p>
                             </div>
                             
@@ -137,7 +137,7 @@ const HeroSection = () => {
                                         <div className='flex items-start'>
                                             <div className='h-5 w-5 rounded-full bg-blue flex-shrink-0 mt-1'></div>
                                             <p className='ml-4 text-black'>
-                                                Merit-based filter – no bias of background, language, or education
+                                                Merit-based filter {"\u2013"} no bias of background, language, or education
                                             </p>
                                         </div>
                                         <div className='flex items-start'>
@@ -164,7 +164,7 @@ const HeroSection = () => {
                                         <div className='flex items-start'>
                                             <div className='h-5 w-5 rounded-full bg-blue flex-shrink-0 mt-1'></div>
                                             <p className='ml-4 text-black'>
-                                                No teachers, no lectures – only peer-led problem solving & collaboration
+                                                No teachers, no lectures {"\u2013"} only peer-led problem solving & collaboration
                                             </p>
                                         </div>
                                         <div className='flex items-start'>
@@ -203,8 +203,8 @@ const HeroSection = () => {
                             
                             <div className='mt-8 text-left bg-blue bg-opacity-10 p-4 rounded-xl'>
                                 <p className='text-lg sm:text-xl text-blue font-medium italic'>
-                                    "Catalysts create solutions that shape homes, hospitals, battlefields, cities, and lives— <br className='hidden md:block'/>
-                                    bringing safety, security, purpose, and possibility to millions."
+                                    {"\u201c"}Catalysts create solutions that shape homes, hospitals, battlefields, cities, and lives{"\u2014"} <br className='hidden md:block'/>
+                                    bringing safety, security, purpose, and possibility to millions.{"”"}
                                 </p>
                             </div>
                         </div>
@@ -222,7 +222,7 @@ const HeroSection = () => {
                                 </h2>
                                 <p className='text-black text-lg mt-4 max-w-3xl mx-auto'>
                                     At Posspole Catalyst, talent has no boundaries. Our program is open to anyone with 
-                                    intent, curiosity, and perseverance—no degree or coding background required.
+                                    intent, curiosity, and perseverance{"\u2014"}no degree or coding background required.
                                 </p>
                             </div>
                             
@@ -280,7 +280,7 @@ const HeroSection = () => {
                                 <p className='text-lg text-black'>In essence: anyone with the <span className='font-bold'>WILL</span> to create.</p>
                                 <div className='mt-4 bg-blue bg-opacity-10 p-4 rounded-xl inline-block mx-auto'>
                                     <p className='text-xl sm:text-2xl font-bold text-blue italic'>
-                                        "Talent Has No Boundaries"<br />
+                                        {"“"}Talent Has No Boundaries{"”"}<br />
                                         <span className='text-lg font-normal'>If you have the will to create, you belong here.</span>
                                     </p>
                                 </div>
@@ -303,35 +303,35 @@ const HeroSection = () => {
                             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                                 {/* Quote 1 */}
                                 <div className='bg-white rounded-xl p-6 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg relative'>
-                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>"</div>
+                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>{"“"}</div>
                                 <p className='text-lg text-black leading-relaxed'>
-                                    From classrooms to catalysts—together, we shape India's innovation future.
+                                    From classrooms to catalysts—together, we shape India{"’"}s innovation future.
                                 </p>
-                                <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>"</div>
+                                <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>{"”"}</div>
                                 </div>
                                 
                                 {/* Quote 2 */}
                                 <div className='bg-white rounded-xl p-6 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg relative'>
-                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>"</div>
+                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>{"“"}</div>
                                     <p className='text-lg text-black italic'>
                                         Your networks + our model = nation-building through innovation.
                                     </p>
-                                    <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>"</div>
+                                    <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>{"”"}</div>
                                 </div>
                                 
                                 {/* Quote 3 */}
                                 <div className='bg-white rounded-xl p-6 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg relative'>
-                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>"</div>
+                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>{"“"}</div>
                                     <p className='text-lg text-black italic'>
                                         Not just partners. Catalysts of change.
                                     </p>
-                                    <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>"</div>
+                                    <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>{"”"}</div>
                                 </div>
                             </div>
                             
                             <div className='mt-8 text-left'>
                                 <p className='text-xl font-bold text-blue'>
-                                    Together, we're building India's innovation future
+                                    Together, we{"\u2019"}re building India{"\u2019"}s innovation future
                                 </p>
                             </div>
                         </div>
@@ -350,7 +350,7 @@ const HeroSection = () => {
                                 <div className='flex items-start'>
                                     <div className='h-6 w-6 rounded-full bg-blue flex-shrink-0 mt-1'></div>
                                     <p className='ml-4 text-black'>
-                                        Beyond Full-Stack – AI-powered, domain-aligned training in aerospace, healthcare, defense, climate tech & more
+                                        Beyond Full-Stack {"\u2013"} AI-powered, domain-aligned training in aerospace, healthcare, defense, climate tech & more
                                     </p>
                                 </div>
                                 <div className='flex items-start'>
@@ -362,19 +362,19 @@ const HeroSection = () => {
                                 <div className='flex items-start'>
                                     <div className='h-6 w-6 rounded-full bg-blue flex-shrink-0 mt-1'></div>
                                     <p className='ml-4 text-black'>
-                                        Specialization – final 6 months in sector-specific tracks
+                                        Specialization {"\u2013"} final 6 months in sector-specific tracks
                                     </p>
                                 </div>
                                 <div className='flex items-start'>
                                     <div className='h-6 w-6 rounded-full bg-blue flex-shrink-0 mt-1'></div>
                                     <p className='ml-4 text-black'>
-                                        No classrooms, no teachers – peer-led, project-based learning
+                                        No classrooms, no teachers {"\u2013"} peer-led, project-based learning
                                     </p>
                                 </div>
                                 <div className='flex items-start'>
                                     <div className='h-6 w-6 rounded-full bg-blue flex-shrink-0 mt-1'></div>
                                     <p className='ml-4 text-black'>
-                                        Multiple pathways – jobs, freelancing, startups, or higher education
+                                        Multiple pathways {"\u2013"} jobs, freelancing, startups, or higher education
                                     </p>
                                 </div>
                             </div>
@@ -393,21 +393,21 @@ const HeroSection = () => {
                             <div className='space-y-6'>
                                 <p className='text-black'>
                                     Posspole Catalyst invites leading corporates and universities to join as Strategic 
-                                    Investment Partners in a national mission to build India's most agile, globally 
+                                    Investment Partners in a national mission to build India{"\u2019"}s most agile, globally 
                                     competitive talent and product ecosystem.
                                 </p>
                                 
                                 <p className='text-black'>
-                                    This is more than infrastructure—it's a stake in reshaping India's product economy.
+                                    This is more than infrastructure—it{"\u2019"}s a stake in reshaping India{"\u2019"}s product economy.
                                 </p>
                                 
                                 <div className='bg-white p-6 rounded-xl shadow-md relative my-6'>
-                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>"</div>
+                                    <div className='absolute -top-3 -left-3 text-6xl text-blue opacity-20'>{"“"}</div>
                                     <p className='text-lg text-black italic'>
-                                        Each product born at Catalyst will serve not just a market, but a mission—engineered for 
+                                        Each product born at Catalyst will serve not just a market, but a mission{"\u2014"}engineered for 
                                         safety, built for prosperity, and scaled to uplift communities.
                                     </p>
-                                    <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>"</div>
+                                    <div className='absolute -bottom-3 -right-3 text-6xl text-blue opacity-20'>{"”"}</div>
                                 </div>
                                 
                                 <h3 className='text-xl sm:text-2xl font-bold text-blue mt-8 mb-4'>

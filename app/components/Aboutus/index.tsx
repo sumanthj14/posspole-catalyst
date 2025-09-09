@@ -13,16 +13,16 @@ const Aboutus = () => {
                             <h2 id="about-heading" className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl pt-2 sm:pt-4 font-bold leading-tight text-center lg:text-start text-blue'>About Us</h2>
 
                             <p className='text-base sm:text-lg pt-3 sm:pt-4 font-normal leading-relaxed text-center lg:text-start text-slate-600'>
-                                India&apos;s first peer-driven, AI-native product innovation platform. Built with Europe&apos;s 01Edu, and launched by Posspole People Pvt, Catalyst moves beyond rote learning—no teachers, no textbooks. Instead, learners tackle real-world challenges, master skills through projects, and grow as innovators from Day 1.
+                                India{"\u2019"}s first peer-driven, AI-native product innovation platform. Built with Europe{"\u2019"}s 01Edu, and launched by Posspole People Pvt, Catalyst moves beyond rote learning{"\u2014"}no teachers, no textbooks. Instead, learners tackle real-world challenges, master skills through projects, and grow as innovators from Day 1.
                             </p>
                             <p className='text-base sm:text-lg pt-3 sm:pt-4 font-normal leading-relaxed text-center lg:text-start text-slate-600'>
-                                Connected to Posspole&apos;s full-stack innovation ecosystem—design, compliance, manufacturing, and global go-to-market—Catalyst turns learning into impact. From healthcare to defence, telecom to energy, learners solve live problems while corporates access ready-to-deploy talent.
+                                Connected to Posspole{"\u2019"}s full-stack innovation ecosystem{"\u2014"}design, compliance, manufacturing, and global go-to-market{"\u2014"}Catalyst turns learning into impact. From healthcare to defence, telecom to energy, learners solve live problems while corporates access ready-to-deploy talent.
                             </p>
                             <p className='text-base sm:text-lg pt-3 sm:pt-4 font-normal leading-relaxed text-center lg:text-start text-slate-600'>
-                                Catalyst isn&apos;t a school. It&apos;s a launchpad—unlocking hidden potential, building global creators, and shaping India&apos;s AI-driven future.
+                                Catalyst isn{"\u2019"}t a school. It{"\u2019"}s a launchpad{"\u2014"}unlocking hidden potential, building global creators, and shaping India{"\u2019"}s AI-driven future.
                             </p>
                             <p className='text-base sm:text-lg pt-3 sm:pt-4 font-bold text-center lg:text-start text-blue'>
-                                Learn. Build. Launch—backed by Posspole&apos;s Corporate VC
+                                Learn. Build. Launch{"\u2014"}backed by Posspole{"\u2019"}s Corporate VC
                             </p>
                         </div>
                     </div>
@@ -54,31 +54,31 @@ const Aboutus = () => {
                         <li className='flex items-start'>
                             <span className='text-blue-600 font-bold mr-3'>•</span>
                             <div>
-                                <strong>Identify Untapped Talent</strong> — Discover potential where no one else is looking, and give it a platform to shine.
+                                <strong>Identify Untapped Talent</strong> {"\u2014"} Discover potential where no one else is looking, and give it a platform to shine.
                             </div>
                         </li>
                         <li className='flex items-start'>
                             <span className='text-blue-600 font-bold mr-3'>•</span>
                             <div>
-                                <strong>Transform Through Learning</strong> — Provide transformative, project-based, and collaborative learning experiences.
+                                <strong>Transform Through Learning</strong> {"\u2014"} Provide transformative, project-based, and collaborative learning experiences.
                             </div>
                         </li>
                         <li className='flex items-start'>
                             <span className='text-blue-600 font-bold mr-3'>•</span>
                             <div>
-                                <strong>Build Thriving Ecosystems</strong> — Partner with local communities, industries, and innovators to create hubs of opportunity.
+                                <strong>Build Thriving Ecosystems</strong> {"\u2014"} Partner with local communities, industries, and innovators to create hubs of opportunity.
                             </div>
                         </li>
                         <li className='flex items-start'>
                             <span className='text-blue-600 font-bold mr-3'>•</span>
                             <div>
-                                <strong>Think Global, Act Local</strong> — Deliver world-class learning while tailoring each initiative to local needs.
+                                <strong>Think Global, Act Local</strong> {"\u2014"} Deliver world-class learning while tailoring each initiative to local needs.
                             </div>
                         </li>
                         <li className='flex items-start'>
                             <span className='text-blue-600 font-bold mr-3'>•</span>
                             <div>
-                                <strong>Sustain Impact</strong> — Foster long-term growth by connecting people to networks and opportunities.
+                                <strong>Sustain Impact</strong> {"\u2014"} Foster long-term growth by connecting people to networks and opportunities.
                             </div>
                         </li>
                     </ul>
