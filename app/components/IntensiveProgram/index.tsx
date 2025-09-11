@@ -4,7 +4,7 @@ const IntensiveProgram = () => {
             <header className='text-center'>
                 {/* Main Heading */}
                 <h2 id="program-heading" className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-blue mb-4 sm:mb-6 md:mb-8 lg:mb-10 leading-tight max-w-6xl mx-auto px-2'>
-                    A 2-year intensive Hackathon program.......
+                    A 2-year intensive Training program.......
                 </h2>
                 <p className='text-lg sm:text-xl md:text-2xl text-blue-700 font-medium mb-4 sm:mb-6 md:mb-8 lg:mb-10 leading-loose max-w-6xl mx-auto px-2'>
                     A 2-year intensive program with more skills and results than those obtained in 5 years of a traditional pedagogy approach
