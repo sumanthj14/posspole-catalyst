@@ -8,7 +8,9 @@
 /* Scroll restoration and behavior */
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
   height: 100%;
   scrollbar-width: thin;
   scrollbar-color: #888 #f1f1f1;
@@ -22,7 +24,14 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   -ms-overflow-style: scrollbar;
+  -webkit-transition: padding-top 0.3s ease-out;
+  -moz-transition: padding-top 0.3s ease-out;
+  -ms-transition: padding-top 0.3s ease-out;
+  -o-transition: padding-top 0.3s ease-out;
+  transition: padding-top 0.3s ease-out;
 }
+
+/* Removed conflicting padding rules that interfere with navbar spacer div */
 
 /* Style scrollbars for webkit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
@@ -96,6 +105,9 @@ body {
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Reduce motion for users who prefer it */
@@ -146,24 +158,54 @@ body {
   /* Remove conflicting styles - let Framer Motion control opacity and transform */
 }
 
-@keyframes fadeIn {
+@-webkit-keyframes fadeIn {
   from {
     opacity: 0;
+    -webkit-transform: translateY(30px);
     transform: translateY(30px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0.3;
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
   }
 }
 
 @keyframes fadeOut {
   from {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   to {
     opacity: 0.3;
+    -webkit-transform: translateY(-15px);
     transform: translateY(-15px);
   }
 }

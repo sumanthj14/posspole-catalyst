@@ -29,32 +29,35 @@ function classNames(...classes: string[]) {
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isMounted, setIsMounted] = useState(false);
     const [loadingLink, setLoadingLink] = useState<string | null>(null);
 
     useEffect(() => {
-        setIsMounted(true);
-        
         const handleScroll = () => {
-            const scrollTop = window.scrollY;
-            setIsScrolled(scrollTop > 50);
-            
-            // Update HTML data attribute for CSS targeting
-            document.documentElement.setAttribute('data-scroll', scrollTop.toString());
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            setIsScrolled(scrollTop > 10);
         };
 
-        // Set initial scroll state
+        // Check initial scroll position
         handleScroll();
         
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        // Use multiple event listeners to ensure compatibility
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        document.addEventListener('scroll', handleScroll, { passive: true });
+        
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            document.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     return (
-        <Disclosure as="nav" className={`navbar transition-all duration-300 ease-out ${isMounted && isScrolled ? 'fixed top-0 w-full z-50 bg-white shadow-lg border-b border-gray-200/50' : 'relative bg-white shadow-sm'}`} role="navigation" aria-label="Main navigation">
-            <>
+        <>
+            {/* Spacer to prevent layout shift when navbar becomes fixed */}
+            {isScrolled ? <div className="h-14" /> : null}
+            <Disclosure as="nav" className={`navbar transition-all duration-300 ease-out ${isScrolled ? 'fixed top-0 w-full z-[9999] bg-white shadow-lg border-b border-gray-200/50' : 'relative bg-white shadow-sm'}`} role="navigation" aria-label="Main navigation">
+                {({ open }) => (
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className={`navbar-container relative flex items-center justify-between transition-all duration-300 ease-out ${isMounted && isScrolled ? 'h-14' : 'h-16 sm:h-18 lg:h-20'}`}>
+                    <div className={`navbar-container relative flex items-center justify-between transition-all duration-300 ease-out ${isScrolled ? 'h-14' : 'h-16 sm:h-18 lg:h-20'}`}>
                         <div className="flex flex-1 items-center justify-between">
 
                             {/* LOGO */}
@@ -66,7 +69,7 @@ const Navbar = () => {
                                         alt="POSSPOLE CATALYST logo" 
                                         width={280} 
                                         height={80}
-                                        className={`navbar-logo w-auto transition-all duration-300 ease-out ${isMounted && isScrolled ? 'h-8 sm:h-9 md:h-10' : 'h-10 sm:h-12 md:h-14 lg:h-16'}`}
+                                        className={`navbar-logo w-auto transition-all duration-300 ease-out ${isScrolled ? 'h-8 sm:h-9 md:h-10' : 'h-10 sm:h-12 md:h-14 lg:h-16'}`}
                                         priority
                                     />
                                 </Link>
@@ -84,7 +87,7 @@ const Navbar = () => {
                                                     item.current
                                                         ? 'text-white bg-navyblue'
                                                         : 'text-slate-700 hover:text-white hover:bg-navyblue',
-                                                    `navlinks transition-all duration-300 ease-out transform hover:scale-105 ${isMounted && isScrolled ? 'px-3 py-2 text-sm' : 'px-4 py-2 text-sm lg:text-base'} rounded-md font-semibold hover:shadow-sm active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 min-h-[40px] flex items-center justify-center`,
+                                                    `navlinks transition-all duration-300 ease-out transform hover:scale-105 ${isScrolled ? 'px-3 py-2 text-sm' : 'px-4 py-2 text-sm lg:text-base'} rounded-md font-semibold hover:shadow-sm active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 min-h-[40px] flex items-center justify-center`,
                                                     loadingLink === item.href ? 'link-loading' : ''
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}
@@ -163,8 +166,9 @@ const Navbar = () => {
 
                     </div>
                 </div>
-            </>
-        </Disclosure>
+                )}
+            </Disclosure>
+        </>
     )
 }
 

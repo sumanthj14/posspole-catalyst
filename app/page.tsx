@@ -4,6 +4,7 @@ import IdentifyTrain from './components/IdentifyTrain/index';
 import IntensiveProgram from './components/IntensiveProgram/index';
 import HeroSection from './components/HeroSection/index';
 import CoFounders from './components/CoFounders/index';
+import WhyPosspole from './components/WhyPosspole/index';
 
 
 export default function Home() {
@@ -14,6 +15,9 @@ export default function Home() {
       </section>
       <section id="about" className="scroll-mt-16">
         <Aboutus />
+      </section>
+      <section id="why-posspole" className="scroll-mt-16">
+        <WhyPosspole />
       </section>
       <section id="identify" className="scroll-mt-16">
         <IdentifyTrain />
